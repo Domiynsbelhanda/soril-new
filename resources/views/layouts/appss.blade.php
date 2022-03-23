@@ -1,465 +1,289 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="no-js" lang="">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/logos/icon.png')}}">
-    <title>
-        SORIL
-    </title>
-    <!--     Fonts and icons     -->
-{{--    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet" />--}}
-    <!-- Nucleo Icons -->
-    <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link id="pagestyle" href="{{asset('assets/css/soft-design-system.css?v=1.0.5')}}" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Soril</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.html">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/owl.carousel.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/animate.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/magnific-popup.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/all.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/flaticon.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/font.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/themify-icons.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/metisMenu.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/nice-select.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/slick.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/main.css") }}">
 </head>
 
-<body class="index-page">
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
 
-<style>
-    html{
-        font-family: Helvetica;
-    }
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <header class="head-one">
+        <div class="main-header-area main-header-two heding-bg">
+            <div class="container">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-xl-2 col-lg-3 col-md-6 col-6">
+                        <div class="logo">
+                            <a class="logo-img" href="{{route('home')}}"><img src="{{ asset("assets/img/logo/header_logo_one.png") }}"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 d-none d-lg-block">
+                        <div class="main-menu menu-01 d-none d-lg-block text-right">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="{{route('home')}}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('about')}}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('evenementss')}}">Events</a>
+                                    </li>
+                                    <li><a href="#">Membership <i class="far fa-chevron-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="{{route('individual')}}">Individual Membership</a></li>
+                                            <li><a href="{{route('collective')}}">Corporate Membership</a></li>
+                                            <li><a href="{{route('membre')}}">Member Associations</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('certification')}}">Certifications</a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="{{route('journal.index')}}">Journal</a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="{{route('library')}}">Library</a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="{{route('emplois')}}">Job offers</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-md-6 col-6 text-right">
+                        <div class="hamburger-menu d-md-block d-lg-none">
+                            <a href="javascript:void(0);">
+                                <i class="far fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="main-header-right-one d-none d-xl-block">
+                            <div class="donate">
+                                <a href="{{route('login')}}" class="theme_btn theme_btn2">Login <i class="fal fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area end -->
 
-    body {
-        font-family: Helvetica;
-    }
-</style>
-<!-- Navbar -->
-<div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-        <div class="col-12">
-            <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-                <div class="container-fluid">
-                    <!--<a class="navbar-brand font-weight-bolder ms-sm-3"
-                      href="index.html"
-                      rel="tooltip" title="Go To Home" data-placement="bottom"
-                      target="_blank"
-                      >
-                      SORIL
-                    </a>-->
-                    <button class="navbar-toggler shadow-none ms-2" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation"
-                            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon mt-2">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </span>
-                    </button>
-                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100 container-ul" id="navigation">
-                        <ul class="navbar-nav navbar-nav-hover col-12 ps-lg-1 w-100 liste-ul">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('home')}}"
-                                   style="color: black; font-weight: bold;"
-                                >
-                                    Home
-                                </a>
-                            </li>
+     <!-- slide-bar start -->
+     <aside class="slide-bar">
+        <div class="close-mobile-menu">
+            <a href="javascript:void(0);"><i class="fas fa-times"></i></a>
+        </div>
 
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('about')}}"
-                                   style="color: black; font-weight: bold;">
-                                    About Us
-                                </a>
-                            </li>
+        <!-- offset-sidebar start -->
+        <div class="offset-sidebar">
+            <div class="offset-widget offset-logo mb-30">
+                <a href="index.html">
+                    <img src="{{ asset("assets/img/logo/header_logo_one.png") }}" alt="logo">
+                </a>
+            </div>
+        </div>
+        <!-- offset-sidebar end -->
 
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('evenementss')}}"
-                                   style="color: black; font-weight: bold;">
-                                    Events
-                                </a>
-                            </li>
+        <!-- side-mobile-menu start -->
+        <nav class="side-mobile-menu">
+            <ul id="mobile-menu-active">
+                <li>
+                    <a class="active" href="#">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+                <li><a href="#">Membership <i class="far fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-membership.html">Individual Membership</a></li>
+                        <li><a href="corporate-membership.html">Corporate Membership</a></li>
+                        <li><a href="#">Member Associations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="certification.html">Certifications</a>
+                </li>
+                <li>
+                    <a class="" href="journal.html">Journal</a>
+                </li>
+                <li>
+                    <a class="" href="library.html">Library</a>
+                </li>
+                <li>
+                    <a class="" href="#">Job offers</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="body-overlay"></div>
+    <!-- slide-bar end -->
 
-                            <li class="nav-item dropdown dropdown-hover mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false"
-                                   style="color: black; font-weight: bold;">
-                                    Membership
-                                    <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
-                                    <div class="d-none d-lg-block">
-                                        <a href="{{route('individual')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Individual Membership</span>
-                                        </a>
-                                        <a href="{{route('collective')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Coorporate Membership</span>
-                                        </a>
-                                        <a href="{{route('membre')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Member Associations</span>
-                                        </a>
-                                    </div>
-                                    <div class="d-lg-none">
-                                        <a href="{{route('individual')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">individual Membership</span>
-                                        </a>
-                                        <a href="{{route('collective')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Coorporate Membership</span>
-                                        </a>
-                                        <a href="{{route('membre')}}" class="dropdown-item border-radius-md">
-                                            <span class="ps-3">Member Associations</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
+    <main>
+        @yield('content')
+    </main>
+    <!--footer-area start-->
+    <footer id="top-menu" class="footer-area pos-rel black-bg-soft5 pt-100">
+        <div class="container">
+            <div class="row mb-40">
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="footer__widget footer__widget__02 mb-30">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-4">
+                                
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-6 col-8">
+                                 <h6 class="fot-title mb-30">Useful Links</h6>
 
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('certification')}}"
-                                   style="color: black; font-weight: bold;">
-                                    Certification
-                                </a>
-                            </li>
-
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('journal.index')}}"
-                                   style="color: black; font-weight: bold;">
-                                    Journal
-                                </a>
-                            </li>
-
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('library')}}"
-                                   style="color: black; font-weight: bold;">
-                                    Library
-                                </a>
-                            </li>
-
-                            <li class="nav-item mx-2">
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   id="dropdownMenuPages" href="{{route('emplois')}}"
-                                   style="color: black; font-weight: bold;">
-                                    Job Offers
-                                </a>
-                            </li>
-
-                            <li class="nav-item my-auto ms-3 ms-lg-0 ml-5 login-button">
-                                    <a type="button" class="btn bg-gradient-info w-auto me-1 mb-0"
-                                       href="{{route('login')}}">
-                                        LOGIN
+                                <ul class="fot-list">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Individual Members</a></li>
+                                    <li><a href="#">Corporate Members</a></li>
+                                    <li><a href="#">Certification</a></li>
+                                    <li><a href="#">The Journal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="footer__widget mb-25">
+                        <div class="footer__widget--box" style="background-image: url(assets/img/bg/fot-bg-box1.png);">
+                            <div class="logo-area">
+                                <a href="{{route('home')}}" class="footer-logo mb-30"><img
+                                        src="assets/img/logo/footer-logo2.png" alt=""></a>
+                            </div>
+                            <ul class="box-list">
+                                <li><i class="fal fa-envelope"></i> infos@arimas.org</li>
+                                <li><i class="fal fa-phone"></i> 011 277 583</li>
+                                <li><i class="fal fa-phone"></i> 071 573 4653</li>
+                                <li><i class="fal fa-map-marker-alt"></i> 08, Meadowbrook Lane, Epsom Downs, Sandton</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="footer__widget mb-30">
+                        <h6 class="fot-title mb-30">Annual Conference</h6>
+                        <div class="post d-flex align-items-center mb-10">
+                            <div class="post__thumb mr-20">
+                                <img src="assets/img/news/post1.jpg" alt="">
+                            </div>
+                            <div class="post__content">
+                                <span><i class="fal fa-calendar-alt"></i> {{ Carbon\Carbon::parse(\App\Models\Evenement::where('typeEvent', 'annual')->first()->date)->format('F, d Y') }}</span>
+                                <h6 class="fot-title">
+                                    <a href="{{route('conference', \App\Models\Evenement::where('typeEvent', 'annual')->first()->id)}}">
+                                        {{\App\Models\Evenement::where('typeEvent', 'annual')->first()->titre}}
                                     </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        <!-- End Navbar -->
-        </div>
-    </div>
-</div>
-
-@yield('content')
-
-<!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
-<div class="container">
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="LoginLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">Soril Administration</h6>
-                    </div>
-                    <div class="modal-body">
-                        <a href="./login-form.php?type=administration?stype=null">
-                            <button type="button" class="btn btn-outline-dark mb-0">Manager</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">Soril Event</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-outline-dark mb-0">Manager</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">Soril MemberShip</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-outline-dark mb-0">Members Manager</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Individual Members</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Corporate Members</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Members Associations</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">The Journal</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-outline-dark mb-0">Managers</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Authors</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Subscriber</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">BookShop</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-outline-dark mb-0">Manager</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalLabel">A CRMP COURSE</h6>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-outline-dark mb-0">Staff</button>
-
-                        <button type="button" class="btn btn-outline-dark mb-0">Participant</button>
-                    </div>
-                </div>
-
-
-
-                <div class="modal-footer">
-                    <button type="button" class="btn bg-gradient-info" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer class="footer pt-4 mt-4">
-    <hr class="horizontal dark mb-2">
-    <div class="container">
-        <div class=" row">
-            <div class="col-md-3 mb-4 ms-auto">
-                <div>
-                    <img src="assets/img/logos/icon.png"
-                         style="width: 80%; object-fit: cover;"
-                         alt="">
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h4 class="text-gradient text-dark">Contact</h4>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" target="_blank">
-                                <i class="fa fa-mobile text-lg opacity-8"></i>
-                                011 277 583
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" target="_blank">
-                                <i class="fa fa-mobile text-lg opacity-8"></i>
-                                071 573 4653
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" target="_blank">
-                                <i class="fa fa-map-marker text-lg opacity-8"></i>
-                                08, Meadowbrook Lane, Epsom Downs, Sandton
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pe-1" target="_blank">
-                                <i class="fa fa-envelope-o text-lg opacity-8"></i>
-                                infos@arimas.org
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h4 class="text-gradient text-dark">Useful Links</h4>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('home')}}" target="_blank">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('individual')}}" target="_blank">
-                                Individual Members
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('collective')}}" target="_blank">
-                                Corporate Members
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('certification')}}" target="_blank">
-                                Certification
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('journal.index')}}" target="_blank">
-                                The Journal
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-6 mb-4">
-                <div>
-                    <h4 class="text-gradient text-dark">Annual Conference</h4>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               href="{{route('conference', \App\Models\Evenement::where('typeEvent', 'annual')->first()->id)}}"
-                               target="_blank">
-                                <h6>{{\App\Models\Evenement::where('typeEvent', 'annual')->first()->titre}}</h6>
-                                <i class="fa fa-calendar text-lg opacity-8"></i>
-                                {{ Carbon\Carbon::parse(\App\Models\Evenement::where('typeEvent', 'annual')->first()->date)->format('F, d Y') }}
-                                -
-                                Durée : {{\App\Models\Evenement::where('typeEvent', 'annual')->first()->duree}} day(s)
-                                <br><i class="fa fa-map-marker text-lg opacity-8"></i>
-                                {{\App\Models\Evenement::where('typeEvent', 'annual')->first()->lieu}}
-                                | {{\App\Models\Evenement::where('typeEvent', 'annual')->first()->ville}}
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h4 class="text-gradient text-dark">Seminars</h4>
-                    <ul class="flex-column ms-n3 nav">
+                                </h6>
+                            </div>
+                        </div>
+                        <h6 class="fot-title mb-30 mt-30">Seminars</h6>
                         @forelse (\App\Models\Evenement::orderBy('date', 'desc')->take(2)->get() as $item)
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                   href="{{route('conference', $item->id)}}"
-                                   target="_blank">
-                                    <h6>{{$item->titre}}</h6>
-                                    <i class="fa fa-calendar text-lg opacity-8"></i>
-                                    {{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}
-                                    -
-                                    Durée : {{$item->duree}} day(s)
-                                    <br><i class="fa fa-map-marker text-lg opacity-8"></i>
-                                    {{$item->lieu}}
-                                    | {{$item->ville}}
-                                </a>
-                            </li>
+                            <div class="post d-flex align-items-center mb-10">
+                                <div class="post__thumb mr-20">
+                                    <img src="assets/img/news/post2.jpg" alt="">
+                                </div>
+                                <div class="post__content">
+                                    <span><i class="fal fa-calendar-alt"></i>
+                                        {{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}
+                                    </span>
+                                    <h6 class="fot-title"><a href="{{route('conference', $item->id)}}">{{$item->titre}}</a></h6>
+                                </div>
+                            </div>
                         @empty
-
+                            
                         @endforelse
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="text-center">
-                    <p class="my-4 text-sm">
-                        All rights reserved. Copyright © <script>
-                            document.write(new Date().getFullYear())
-                        </script> -- Created & Powered by
-                        <a href="https://www.ngomadigitech.com/" target="_blank">NgomaDigiTech (Pty) Ltd.</a>.
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="footer-copy-right black-bg-soft2 pt-25 pb-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-4 col-md-8">
+                        <div class="fot-nav">
+                            <ul class="fot-nav-list">
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-8 col-md-4">
+                        <div class="copy-right-area-02 text-right">
+                            <span>Copyright By <a href="https://www.ngomadigitech.com/">NgomaDigiTech</a> - <script>
+                                document.write(new Date().getFullYear())
+                            </script></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-area end-->
 
-<style>
-    li a {
-        font-weight: normal!important;
-        margin: 10px!important;
-    }
 
-    .container-ul{
-        align-content: center;
-        text-align: center;
-        margin: auto;
-    }
 
-    .liste-ul{
-        padding-left: 20px!important;
-    }
-
-    .login-button {
-        position: absolute;
-        right: 25px!important;
-    }
-</style>
-<!--   Core JS Files   -->
-<script src="{{asset('assets/js/core/popper.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
-<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
-<script src="{{asset('assets/js/plugins/countup.min.js')}}"></script>
-<script src="{{asset('assets/js/plugins/choices.min.js')}}"></script>
-<script src="{{asset('assets/js/plugins/prism.min.js')}}"></script>
-<script src="{{asset('assets/js/plugins/highlight.min.js')}}"></script>
-<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
-<script src="{{asset('assets/js/plugins/rellax.min.js')}}"></script>
-<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
-<script src="{{asset('assets/js/plugins/tilt.min.js')}}"></script>
-<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
-<script src="{{asset('assets/js/plugins/choices.min.js')}}"></script>
-<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-<script src="{{asset('assets/js/plugins/parallax.min.js')}}"></script>
-<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-<script src="{{asset('assets/js/soft-design-system.min.js?v=1.0.5')}}" type="text/javascript"></script>
-<script type="text/javascript">
-    if (document.getElementById('state1')) {
-        const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-        if (!countUp.error) {
-            countUp.start();
-        } else {
-            console.error(countUp.error);
-        }
-    }
-    if (document.getElementById('state2')) {
-        const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-        if (!countUp1.error) {
-            countUp1.start();
-        } else {
-            console.error(countUp1.error);
-        }
-    }
-    if (document.getElementById('state3')) {
-        const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-        if (!countUp2.error) {
-            countUp2.start();
-        } else {
-            console.error(countUp2.error);
-        };
-    }
-</script>
+    <!-- JS here -->
+    <script src="{{ asset("assets/js/vendor/modernizr-3.5.0.min.js") }}"></script>
+    <script src="{{ asset("assets/js/vendor/jquery-3.5.1.min.js") }}"></script>
+    <script src="{{ asset("assets/js/popper.min.js") }}"></script>
+    <script src="{{ asset("assets/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("assets/js/owl.carousel.min.js") }}"></script>
+    <script src="{{ asset("assets/js/isotope.pkgd.min.js") }}"></script>
+    <script src="{{ asset("assets/js/one-page-nav-min.js") }}"></script>
+    <script src="{{ asset("assets/js/slick.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.meanmenu.min.js") }}"></script>
+    <script src="{{ asset("assets/js/metisMenu.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.nice-select.js") }}"></script>
+    <script src="{{ asset("assets/js/ajax-form.js") }}"></script>
+    <script src="{{ asset("assets/js/wow.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.counterup.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.scrollUp.min.js") }}"></script>
+    <script src="{{ asset("assets/js/imagesloaded.pkgd.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.magnific-popup.min.js") }}"></script>
+    <script src="{{ asset("assets/js/jquery.easypiechart.js") }}"></script>
+    <script src="{{ asset("assets/js/tilt.jquery.js") }}"></script>
+    <script src="{{ asset("assets/js/plugins.js") }}"></script>
+    <script src="{{ asset("assets/js/main.js") }}"></script>
 </body>
 
 </html>
