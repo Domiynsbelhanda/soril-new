@@ -125,32 +125,32 @@
         <nav class="side-mobile-menu">
             <ul id="mobile-menu-active">
                 <li>
-                    <a class="active" href="#">Home</a>
+                    <a href="{{route('home')}}">Home</a>
                 </li>
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="{{route('about')}}">About Us</a>
                 </li>
                 <li>
-                    <a href="events.html">Events</a>
+                    <a href="{{route('evenementss')}}">Events</a>
                 </li>
                 <li><a href="#">Membership <i class="far fa-chevron-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="individual-membership.html">Individual Membership</a></li>
-                        <li><a href="corporate-membership.html">Corporate Membership</a></li>
-                        <li><a href="#">Member Associations</a></li>
+                        <li><a href="{{route('individual')}}">Individual Membership</a></li>
+                        <li><a href="{{route('collective')}}">Corporate Membership</a></li>
+                        <li><a href="{{route('membre')}}">Member Associations</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="certification.html">Certifications</a>
+                    <a href="{{route('certification')}}">Certifications</a>
                 </li>
                 <li>
-                    <a class="" href="journal.html">Journal</a>
+                    <a class="" href="{{route('journal.index')}}">Journal</a>
                 </li>
                 <li>
-                    <a class="" href="library.html">Library</a>
+                    <a class="" href="{{route('library')}}">Library</a>
                 </li>
                 <li>
-                    <a class="" href="#">Job offers</a>
+                    <a class="" href="{{route('emplois')}}">Job offers</a>
                 </li>
             </ul>
         </nav>
