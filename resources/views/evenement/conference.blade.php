@@ -224,7 +224,7 @@
                 @forelse(\App\Models\Sponsor::all() as $spons)
                     @if($spon->sponsor_id == $spons->id)
                         @if($spon->evenement_id == $annual->id)
-                            <li><a href="#"><img src="{{asset($spons->image)}}" alt="{{$spons->organisation}}" /></a></li>
+                            <li><a href="#"><img width="200px" src="{{asset($spons->image)}}" alt="{{$spons->organisation}}" /></a></li>
                         @endif
                     @endif
                 @empty
