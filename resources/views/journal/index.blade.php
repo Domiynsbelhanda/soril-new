@@ -5,68 +5,231 @@
 @endsection
 
 @section('content')
-    <!-- -------- START HEADER 7 w/ text and video ------- -->
-    <header class="bg-gradient-dark">
-        <div class="page-header min-vh-100" style="background-image: url('assets/img/office-dark.jpg');">
-            <span class="mask bg-gradient-light opacity-8"></span>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center mx-auto my-auto">
-                        <img src="{{asset('assets/img/journal.png')}}" width="75%;"
-                             style="margin: 10px" alt="">
+    @php
+        $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
+    @endphp
+    <div class="slider-area slider-area-02 heding-bg pos-rel">
+        <div class="slider-hero-img d-none d-lg-block">
+            <img class="img-fluid hero-right" src="{{ asset("assets/img/slider/slider2.jpg") }}" alt="">
+        </div>
+        <div class="extra_info d-none d-lg-block">
+            <div class="extra-box">
+                <div class="slider-toltip d-flex align-items-center">
+                    <div class="close_icon"><i class="fal fa-times"></i></div>
+                    <div class="slider-toltip__thumb mr-25">
+                        <img src="assets/img/slider/toltip-img1.jpg" alt="">
                     </div>
-                    <div class="col-lg-6 text-center">
-                        @php
-                            $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
-                        @endphp
-                        <div class="text-center"
-                             style="border-radius: 0%; width: 80%; margin: auto;
-                             border-top: 6px solid #6092fe;
-                             color: #FFFFFF;
-                             background: rgba(18, 19, 49, 1); padding: 10px; margin-top: 5px">
-                            <h4 style="color: white; text-transform: capitalize">{{$annual->titre}}</h4>
-
-                            <p>
-                                {{$annual->lieu}} | {{$annual->ville}}
-                            </p>
-
-                            <p>
-                                {{ Carbon\Carbon::parse($annual->date)->format('F, d Y') }}
-                                -
-                                Durée : {{$annual->duree}} day(s)
-                            </p>
-
-                            <p>
-                                <i>{{$annual->description}}</i>
-                            </p>
-                            <a href="{{route('conference', $annual->id)}}" style="margin:20px!important;
-                            background-color: #6092fe;
-                            color:white!important;" target="_blank"
-                               class="btn mt-5 up btn-round">View More ...</a>
+                    <div class="slider-toltip__content">
+                        <div class="slider-toltip--meta mb-10">
+                            <span>{{ Carbon\Carbon::parse($annual->date)->format('F, d Y') }} /</span>
+                            <span>Durée : {{$annual->duree}} day(s) /</span>
+                            <span>{{$annual->lieu}} | {{$annual->ville}}</span>
+                        </div>
+                        <h6 class="slide-title">{{$annual->titre}}</h6>
+                        <p>{{$annual->description}}</p>
+                        <a class="theme_btn active-btn wow fadeInUp animated mt-10" data-wow-delay=".7s"
+                                        href="{{route('conference', $annual->id)}}">Voir plus
+                            <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
+                <div class=" container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="slider__content slider__content_02 text-left">
+                            <img class="card-img-top" src="{{ asset("assets/img/logo/journal.png") }}" style="width: 90%; height: auto; margin: 20px auto;" alt="Card image cap">
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="position-absolute w-100 z-index-1 bottom-0">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="moving-waves">
-                        <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
-                        <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
-                        <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
-                        <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,1" />
-                    </g>
-                </svg>
+        </div>
+    </div>
+    <section>
+        @if(session('message'))
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-success" role="alert">
+                        {{session('message')}}
+                    </div>
+                </div>
+            </div>
+        @endif
+    </section>
+
+    <section class="services-details-area pt-40">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-12">
+                    <div class="services-right-area pl-50">
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Key Features</h5>
+                            </div>
+                            <div class="widget-list-2">
+                                <p class="list-item">Course Name: <span>Certified African Risk Leader</span></p>
+                                <p class="list-item">Reference: <span>CARL</span></p>
+                                <p class="list-item">Duration: <span></span></p>
+                                <p class="list-item">Starting Date: <span></span></p>
+                                <p class="list-item">Fees: <span></span></p>
+                                <p class="list-item">Members: <span></span></p>
+                                <p class="list-item">Non Members: <span></span></p>
+                            </div>
+                            <div>
+                                <a class="theme_btn wow fadeInUp animated" data-wow-delay=".7s"
+                                    href="#">Enroll Now
+                                    <i class="far fa-long-arrow-right"></i></a>
+                                    <a class="theme_btn wow fadeInUp animated" data-wow-delay=".7s"
+                                    href="#">More Information
+                                    <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Get In Touch</h5>
+                            </div>
+                            <ul class="address-list">
+                                <li>
+                                    <span>Editorial</span><p> Dwayne J. Williams</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                                <li>
+                                    <span>Publications</span><p>Don Richards</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="widget add-img-here mb-40">
+                            <img src="assets/img/service/08.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-xl-8 col-lg-8 col-md-12">
+                    <div class="services-left-area pb-100">
+                        <div class="services-wrap-content">
+                            <div class="services-wrap-content__title mb-15">
+                                <h4>The Journal Overview</h4>
+                            </div>
+                            <div class="services-wrap-content__text">
+                                <p class="mb-20">The African Journal of Risk Leadership (AJRL) is published 
+                                    quarterly online only on behalf of on behalf of the African Risk 
+                                    Management Society. <br><br>
+
+                                    The mission of the ARJL is to create, stimulate and perpetuate a 
+                                    culture of information sharing and publishing amongst researchers 
+                                    and practitioners of risk management in African in ways that will 
+                                    contribute to availability of Africa related risk and risk management 
+                                    information, better understanding of Africa risk and risk management 
+                                    particularities and, overall, to the purpose of ARiMaS. The Scope <br><br>
+                                    The AJRM publishes risk management related original and review papers, 
+                                    studies, technical reports, educational articles, conference reports, 
+                                    management reports, book reviews, news and notes commentaries on business, 
+                                    organisational, social, political, and economic risks and risk management 
+                                    issues and new developments in the field of risk management.</p>
+                            </div>
+                        </div>
+                        <div class="services-wrap-content__text">
+                            <div class="services-wrap-content__title mb-15">
+                                <h5>Target Audience</h5>
+                                <p>
+                                    The AJRM is intended for African practitioners, researchers, and scholars 
+                                    involved with or interested in Africa risk management issues and adjacent fields.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-wrap-content__text">
+                            <div class="services-wrap-content__title mb-15">
+                                <h5>Submissions</h5>
+                                <p>
+                                    Submissions may be voluntary, by invitation, and suggestions for special 
+                                    issues and publications are welcome. We are particularly interested in 
+                                    receiving articles and comments reflecting the point of view and experience 
+                                    of practitioners working in Africa.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-wrap-content row">
+                            <div class="col-12">
+                                <div class="services-details-list mb-10">
+                                    <h4 class="mb-15">Areas of particular interest are:</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ol class="col-xl-6 col-lg-6 col-md-6 col-sm-12 blog-details__list mt-20">
+                                    <li><a href="#">Enterprise risk management (corporate, governments/municipalities)</a></li>
+                                    <li><a href="#">Insurance</a></li>
+                                    <li><a href="#">Alternative Risk financing</a></li>
+                                    <li><a href="#">Operational Risk Management (financial and non-financial companies)</a></li>
+                                    <li><a href="#">Credit Risk Management (financial and non-financial companies)</a></li>
+                                    <li><a href="#">Treasury Risk management(financial and non-financial companies)</a></li>
+                                    <li><a href="#">Corporate Governance</a></li>
+                                    <li><a href="#">External/Internal Audit</a></li>
+                                    <li><a href="#">Healthcare risk management</a></li>
+                                    <li><a href="#">Country Risk Management</a></li>
+                                    <li><a href="#">Economic Risk Management</a></li>
+                                    <li><a href="#">Disaster Management</a></li>
+                                </ol>
+                                <ol class="col-xl-6 col-lg-6 col-md-6 col-sm-12 blog-details__list mt-20">
+                                    <li><a href="#">Environmental Risk Management</a></li>
+                                    <li><a href="#">Crisis management</a></li>
+                                    <li><a href="#">Business Continuity</a></li>
+                                    <li><a href="#">Cyber Risk Management</a></li>
+                                    <li><a href="#">Social Risk Management</a></li>
+                                    <li><a href="#">Risk Governance (Global Risks)</a></li>
+                                    <li><a href="#">International Business Law</a></li>
+                                    <li><a href="#">International Investment Law</a></li>
+                                    <li><a href="#">International Trade</a></li>
+                                    <li><a href="#">Leadership</a></li>
+                                    <li><a href="#">Strategic Management</a></li>
+                                    <li><a href="#">Risk management information systems</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12">
+                    <div class="services-right-area pl-50">
+                        <div class="widget mb-40">
+                            <ul class="widget-list-with-links">
+                                <li class="list-item"><a href="#">Register as author</a></li>
+                                <li class="list-item"><a href="#">Submit an article</a></li>
+                                <li class="list-item"><a href="#">Subscribe to journal</a></li>
+                                <li class="list-item"><a href="#">View articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Contact Us</h5>
+                            </div>
+                            <ul class="address-list">
+                                <li>
+                                    <span>Editorial</span><p> Franchesca J. Charney</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                                <li>
+                                    <span>Publications</span><p>Richard Reicherter</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:richard@arimas.org">Email: <span>richard@arimas.org</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget add-img-here mb-40">
+                            <img src="assets/img/service/08.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <!-- -------- END HEADER 7 w/ text and video ------- -->
+    </section>
 
-    <section class="py-2">
+    {{-- <section class="py-2">
         <div class="container">
             @if(session('message'))
             <div class="row">
@@ -297,10 +460,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <div class="modal fade" id="journalLogin" tabindex="-1" aria-labelledby="journalLoginLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="journalLogin" tabindex="-1" aria-labelledby="journalLoginLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -346,7 +509,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
+    </div> --}}
 @endsection
