@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
     <section class="page-title-area" style="background: linear-gradient(#03072e98, #03072eb9), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
         <div class="container" >
             <div class="row">

@@ -5,266 +5,235 @@
 @endsection
 
 @section('content')
-    <!-- -------- START HEADER 7 w/ text and video ------- -->
-    <header class="bg-gradient-dark">
-        <div class="page-header min-vh-75" style="background-image: url('assets/img/office-dark.jpg');">
-            <span class="mask bg-gradient-dark opacity-8"></span>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center mx-auto my-auto">
-                        <img src="{{asset('assets/img/logos/carl-logo.png')}}" width="75%;"
-                             style="margin: 0px" alt="">
+    @php
+        $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
+    @endphp
+    <div class="slider-area slider-area-02 heding-bg pos-rel">
+        <div class="slider-hero-img d-none d-lg-block">
+            <img class="img-fluid hero-right" src="{{ asset("assets/img/slider/slider2.jpg") }}" alt="">
+        </div>
+        <div class="extra_info d-none d-lg-block">
+            <div class="extra-box">
+                <div class="slider-toltip d-flex align-items-center">
+                    <div class="close_icon"><i class="fal fa-times"></i></div>
+                    <div class="slider-toltip__thumb mr-25">
+                        <img src="assets/img/slider/toltip-img1.jpg" alt="">
                     </div>
-                    <div class="col-lg-6 text-center">
-                        @php
-                            $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
-                        @endphp
-                        <div class="text-center"
-                             style="border-radius: 0%; width: 80%; margin: auto;
-                             border-top: 6px solid #6092fe;
-                             color: #FFFFFF;
-                             background: rgba(18, 19, 49, 1); padding: 10px; margin-top: 5px">
-                            <h4 style="color: white; text-transform: capitalize">{{$annual->titre}}</h4>
-
-                            <p>
-                                {{$annual->lieu}} | {{$annual->ville}}
-                            </p>
-
-                            <p>
-                                {{ Carbon\Carbon::parse($annual->date)->format('F, d Y') }}
-                                -
-                                Durée : {{$annual->duree}} day(s)
-                            </p>
-
-                            <p>
-                                <i>{{$annual->description}}</i>
-                            </p>
-                            <a href="{{route('conference', $annual->id)}}" style="margin:20px!important;
-                            background-color: #6092fe;
-                            color:white!important;" target="_blank"
-                               class="btn mt-5 up btn-round">View More ...</a>
+                    <div class="slider-toltip__content">
+                        <div class="slider-toltip--meta mb-10">
+                            <span>{{ Carbon\Carbon::parse($annual->date)->format('F, d Y') }} /</span>
+                            <span>Durée : {{$annual->duree}} day(s) /</span>
+                            <span>{{$annual->lieu}} | {{$annual->ville}}</span>
+                        </div>
+                        <h6 class="slide-title">{{$annual->titre}}</h6>
+                        <p>{{$annual->description}}</p>
+                        <a class="theme_btn active-btn wow fadeInUp animated mt-10" data-wow-delay=".7s"
+                                        href="{{route('conference', $annual->id)}}">Voir plus
+                            <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
+                <div class=" container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="slider__content slider__content_02 text-left">
+                            <img class="card-img-top" src="{{ asset("assets/img/logo/carl-logo.png") }}" style="width: 90%; height: auto; margin: 20px auto;" alt="Card image cap">
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="position-absolute w-100 z-index-1 bottom-0">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="moving-waves">
-                        <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
-                        <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
-                        <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
-                        <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,1" />
-                    </g>
-                </svg>
-            </div>
         </div>
-    </header>
-    <!-- -------- END HEADER 7 w/ text and video ------- -->
-
-    <section class="py-2">
+    </div>
+    
+    <section class="services-details-area pt-40">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <h2 class="text-gradient text-danger mb-0 mt-2">Key Features</h2>
-                    <p style="color: black">
-                        Course Name: <b>Certified African Risk Leader</b> <br>
-                        Reference: <b>CARL</b> <br>
-                        Duration: <b>0 Year(s)</b> <br>
-                        Starting Date: <b>Facultative</b> <br>
-                        Fees: <b>$ 15000</b> <br>
-                        Members: <br>
-                        Non-Members: <br>
-                    </p>
-
-                    <button type="button" class="btn bg-gradient-info w-auto me-1 mb-2">Enroll Now</button>
-                    <br>
-                    <a href="{{route('moreinfo')}}" class="btn bg-gradient-info w-auto me-1 mb-2">
-                        More Information
-                    </a>
-                </div>
-
-                <div class="col-lg-6">
-                    <h2 class="text-gradient text-danger mb-0 mt-2">Description</h2>
-                    <p style="color:black">
-                        Socio-economic factors, geopolitical tensions, digitisation, new technological advances, large scale natural disasters and climate change are delivering an era of greater uncertainty and volatility for organisations at a time when opportunities are expanding and becoming more globally integrated and complex.
-                        <br>
-                        These new risk trends are emerging simultaneously and require executives and board members to develop risk leadership capabilities beyond the any existing risk management function. This is because leaders in organisations can powerfully influence culture and policies. They can inspire, energise, and, well, lead on how to respond to risk. Through their actions and decisions, they can ensure that risk thinking is part of decision making
-                        <br><br>
-                        The Certified African Risk Leader course (CARL) is designed to equip participants with the knowledge and skillset required to become risk leaders in their companies and organisations. The course is will immerse you in dynamic case studies, tail-risk stress tests, scenario planning, and wargaming exercises, as you explore how to make informed risk management decisions for current and emerging risks, and to critically appraise real life case studies from different sectors and countries.
-                    </p>
-                </div>
-
-                <div class="col-lg-3">
-                    <img src="{{asset('assets/img/logos/badge.png')}}" alt="" style="width: 100%">
-
-                    <h6 style="color:black">Who is it for?</h6>
-
-                    <ul class="text-sm" style="color:black">
-                        <li>Senior business leaders in large established companies who have significant corporate management responsibilities, including:</li>
-
-                        <li>Chief risk officers and other leaders in risk management roles</li>
-
-                        <li>Chief financial officers</li>
-
-                        <li>Board members</li>
-
-                        <li>General managers, including CEOs, COOs, and division heads</li>
-
-                        <li>Senior leaders responsible for executing and controlling strategy</li>
-
-                        <li>Public relations executives</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100 py-5 pt-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h5>Receive Your Certification in 5 Steps!</h5>
-
-                    <div>
-                        <ul class="list-group">
-                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <h1>1</h1>
-                                </div>
-                                <div class="flex-column">
-                                    <p><small>
-                                            Read program description and eligibility criteria to view important information that will help you be a successful candidate
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <h1>2</h1>
-                                </div>
-                                <div class="flex-column">
-                                    <p><small>
-                                            Submit your application online with all required documentation
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <h1>3</h1>
-                                </div>
-                                <div class="flex-column">
-                                    <p><small>
-                                            Successful applicants will receive username and password to their online learning portal where they can download study materials and practice questions
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <h1>4</h1>
-                                </div>
-                                <div class="flex-column">
-                                    <p><small>
-                                            Choose an examination date, prepare for it and take the 2.5-hour online examination consisting of 125 multiple choice questions.
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <h1>5</h1>
-                                </div>
-                                <div class="flex-column">
-                                    <p><small>
-                                            Upon passing, successful candidates will receive their certification card and acknowledged as a CARL holder!
-                                        </small></p>
-                                </div>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <h5>Key Attributes</h5>
-
-                    <div>
-                        <ul class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/don_quixote.jpg" class="" alt="quixote">
-                                </div>
-                                <div class="flex-column">
-                                    Relevant
-                                    <p><small>
-                                            CARL is created by risk professionals in Africa for the risks relevant to this region. We use Asia Pacific case studies and the syllabus is crafted based on what risk managers in the region are most concerned with.
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/don_quixote.jpg" class="" alt="quixote">
-                                </div>
-                                <div class="flex-column">
-                                    Holistic
-                                    <p><small>
-                                            The syllabus comprises a holistic range of risk management activities that goes beyond ERM. It also touches on risk financing and risk treatment. We believe that the syllabus encompasses what the risk managers of today need to be equipped with.
-                                        </small></p>
-                                </div>
-                            </a>
-
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                <div style="margin-right: 10px">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/don_quixote.jpg" class="" alt="quixote">
-                                </div>
-                                <div class="flex-column">
-                                    Supportive
-                                    <p><small>
-                                            CARL comes with online training courses for each of the 5 modules, should the candidate wish to practice. We ensure that you will be equipped with the tools and training needed to successfully complete the CARL.
-                                        </small></p>
-                                </div>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div>
-                        <h5>Non-SoRil Members</h5>
-
-                        <div class="card" style="padding: 10px">
-                            <p>
-                                Enroling for the CARL means you join SoRil as a member and become part of our African risk management Community. The additional fee you pay on top of your application fee goes toward the payment of your membership.
-                            </p>
+                <div class="col-xl-3 col-lg-3 col-md-12">
+                    <div class="services-right-area pl-50">
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Key Features</h5>
+                            </div>
+                            <div class="widget-list-2">
+                                <p class="list-item">Course Name: <span>Certified African Risk Leader</span></p>
+                                <p class="list-item">Reference: <span>CARL</span></p>
+                                <p class="list-item">Duration: <span>0 Year(s)</span></p>
+                                <p class="list-item">Starting Date: <span>Facultative</span></p>
+                                <p class="list-item">Fees: <span>$ 15000</span></p>
+                                <p class="list-item">Members: <span></span></p>
+                                <p class="list-item">Non Members: <span></span></p>
+                            </div>
+                            <div>
+                                <a class="theme_btn wow fadeInUp animated" data-wow-delay=".7s"
+                                    href="#">Enroll Now
+                                    <i class="far fa-long-arrow-right"></i></a>
+                                    <a class="theme_btn wow fadeInUp animated" data-wow-delay=".7s"
+                                    href="#">More Information
+                                    <i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Get In Touch</h5>
+                            </div>
+                            <ul class="address-list">
+                                <li>
+                                    <span>Editorial</span><p> Dwayne J. Williams</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                                <li>
+                                    <span>Publications</span><p>Don Richards</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget add-img-here mb-40">
+                            <img src="assets/img/service/08.jpg" alt="">
                         </div>
                     </div>
-
-                    <br>
-
-                    <div>
-                        <h2 class="text-gradient text-danger mb-0 mt-2">Contact US</h2>
-                        <p style="color:black">
-                            <b>Editorial</b> <br> <br>
-                            Dwayne J. Williams <br>
-                            Phone: 011 312 54334 <br>
-                            Email: fcharney@soril.org <br>
-                            <br>
-                            <b>Publications</b> <br><br>
-                            Don Richards <br>
-                            Phone: 011 312 54334 <br>
-                            Email: richard@soril.org
-                        </p>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="services-left-area pb-100">
+                        <div class="services-wrap-content">
+                            <div class="services-wrap-content__title mb-15">
+                                <h4>Description</h4>
+                            </div>
+                            <div class="services-wrap-content__text">
+                                <p class="mb-20">Socio-economic factors, geopolitical tensions, digitisation, 
+                                    new technological advances, large scale natural disasters and climate change 
+                                    are delivering an era of greater uncertainty and volatility for organisations 
+                                    at a time when opportunities are expanding and becoming more globally integrated 
+                                    and complex. <br><br>
+                                    These new risk trends are emerging simultaneously and require executives and 
+                                    board members to develop risk leadership capabilities beyond the any existing 
+                                    risk management function. This is because leaders in organisations can powerfully 
+                                    influence culture and policies. They can inspire, energise, and, well, lead on 
+                                    how to respond to risk. Through their actions and decisions, they can ensure 
+                                    that risk thinking is part of decision making <br><br>
+                                    
+                                    The Certified African Risk Leader course (CARL) is designed to equip participants 
+                                    with the knowledge and skillset required to become risk leaders in their 
+                                    companies and organisations. The course is will immerse you in dynamic case 
+                                    studies, tail-risk stress tests, scenario planning, and wargaming exercises, 
+                                    as you explore how to make informed risk management decisions for current and 
+                                    emerging risks, and to critically appraise real life case studies from 
+                                    different sectors and countries.</p>
+                            </div>
+                        </div>
+                        <div class="services-wrap-content__text">
+                            <div class="services-wrap-content__title mb-15">
+                                <h4>Key Attributes</h4>
+                            </div>
+                            <div class="services-wrap-content__text">
+                                <div class="row mt-15 mb-20">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="features-03 d-flex align-items-center mb-30">
+                                            <div class="features-03__icon mr-25">
+                                                <i class="flaticon-award"></i>
+                                            </div>
+                                            <div class="features-03__content">
+                                                <h5>Relevant</h5>
+                                                <p>CARL is created by risk professionals in Africa for the risks 
+                                                    relevant to this region. We use Asia Pacific case studies and 
+                                                    the syllabus is crafted based on what risk managers in the region 
+                                                    are most concerned with.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="features-03 d-flex align-items-center mb-30">
+                                            <div class="features-03__icon mr-25">
+                                                <i class="flaticon-award"></i>
+                                            </div>
+                                            <div class="features-03__content">
+                                                <h5>Holistic</h5>
+                                                <p>The syllabus comprises a holistic range of risk management activities 
+                                                    that goes beyond ERM. It also touches on risk financing and risk 
+                                                    treatment. We believe that the syllabus encompasses what the risk 
+                                                    managers of today need to be equipped with.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="features-03 d-flex align-items-center mb-30">
+                                            <div class="features-03__icon mr-25">
+                                                <i class="flaticon-award"></i>
+                                            </div>
+                                            <div class="features-03__content">
+                                                <h5>Supportive</h5>
+                                                <p>CARL comes with online training courses for each of the 
+                                                    5 modules, should the candidate wish to practice. 
+                                                    We ensure that you will be equipped with the tools 
+                                                    and training needed to successfully complete the CARL.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-wrap-content row">
+                            <div class="col-xl-5 col-lg-6 col-md-6">
+                                <div class="services-wrap-content__thumb mb-30">
+                                    <img src="assets/img/service/04.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-6 col-md-6">
+                                <div class="services-details-list pl-30 mb-30">
+                                    <h4 class="mb-15">Receive Your Certification in 5 Steps!</h4>
+                                    
+                                    <ol class="blog-details__list mt-20">
+                                        <li><a href="#">Read program description and eligibility criteria to view important information that will help you be a successful candidate</a></li>
+                                        <li><a href="#">Submit your application online with all required documentation</a></li>
+                                        <li><a href="#">Successful applicants will receive username and password to their online learning portal where they can download study materials and practice questions</a></li>
+                                        <li><a href="#">Choose an examination date, prepare for it and take the 2.5-hour online examination consisting of 125 multiple choice questions</a></li>
+                                        <li><a href="#">Upon passing, successful candidates will receive their certification card and acknowledged as a CARL holder!</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12">
+                    <div class="services-right-area pl-50">
+                        <div class="widget mb-40">
+                           
+                            <div class="widget-title">
+                                <h5>Who is it for?</h5>
+                            </div>
+                            <p class="list-header mb-20">Senior business leaders in large established companies 
+                                who have significant corporate management responsibilities, including:</p>
+                            <ul class="widget-list-3">
+                                <li class="list-item">Chief risk officers and other leaders in risk management roles</li>
+                                <li class="list-item">Chief financial officers</li>
+                                <li class="list-item">Board members</li>
+                                <li class="list-item">General managers, including CEOs, COOs, and division heads</li>
+                                <li class="list-item">Senior leaders responsible for executing and controlling strategy</li>
+                                <li class="list-item">Public relations executivesy</li>
+                            </ul>
+                        </div>
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Get In Touch</h5>
+                            </div>
+                            <ul class="address-list">
+                                <li><a href="#"><span>Mayor office</span> +4488812345</a></li>
+                                <li><a href="#"><span>Emergency</span> 911 (Tool Free)</a></li>
+                                <li><a href="#"><span>Non emergency</span> 311 (Tool Free)</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget add-img-here mb-40">
+                            <img src="assets/img/service/08.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 @endsection
