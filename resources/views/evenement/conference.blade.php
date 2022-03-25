@@ -107,7 +107,7 @@
                 @forelse ($anims as $anim)
                     @if ($program->facilitator == $anim->id)
                         <div class="single">
-                            <img src="images/speaker_1.jpg" alt="" />
+                            <img src="{{asset($anim->image)}}" alt="" />
                 
                             <div>
                             <h3>{{$anim->prenom}}<br />{{$anim->nom}}</h3>
