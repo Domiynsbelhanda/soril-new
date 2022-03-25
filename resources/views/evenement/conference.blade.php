@@ -25,6 +25,7 @@
         <li><a href="#speakers">speakers</a></li>
         <li><a href="#scheadule">schedule</a></li>
         <li><a href="#sponsors">sponsors</a></li>
+        <li><a href="{{route('opportunity')}}">Sponsorship Opportunity</a></li>
         <li><a href="https://www.soril.org">back to soril</a></li>       
       </ul>
 
@@ -215,7 +216,7 @@
     <div class="container">
 
       <h2>Our sponsors</h2>
-      <p class="subtitle">Interested in becoming a sponsor? <a href="#" class="open-contact-form">Sponsorship Opportunity</a></p>
+      <p class="subtitle">Interested in becoming a sponsor? <a href="{{route('opportunity')}}">Sponsorship Opportunity</a></p>
 
       <div class="slides">
         <ul>
