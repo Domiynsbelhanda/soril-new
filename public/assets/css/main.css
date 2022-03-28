@@ -4961,7 +4961,7 @@ input.main-search-input:-ms-input-placeholder {
   position: relative;
 }
 .portfolio-02__img {
-  margin-right: -64px;
+  margin-right: 0;
   margin-left: 277px;
   margin-bottom: 20px;
 }

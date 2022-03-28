@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-lg-6 col-md-12">
+            <div class="col-xl-5 col-lg-6 col-md-12 pl-2">
                 <div class="portfolio-wrapper-02">
                     <div class="portfolio">
                         <div class="section-title mb-15">
