@@ -8612,7 +8612,7 @@ input.main-search-input:-ms-input-placeholder {
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  padding: 45px 43px 43px 43px;
+  padding: 15px 5px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .features {
@@ -8647,7 +8647,7 @@ input.main-search-input:-ms-input-placeholder {
   transition: all 0.4s ease-out 0s;
 }
 .features__content .semi-title {
-  color: #ffffff;
+  color: #00aa55;
 }
 .features__content p {
   color: #ddd;
