@@ -1080,3 +1080,11 @@ div.package-item {
   border: 4px solid #10a1d6;
   padding: 20px 10px;
 }
+@media all and (max-width: 600px) {
+  div.package-item {
+    flex-flow: column;
+  }
+  .package-item .details {
+    width: 100%;
+  }
+}
