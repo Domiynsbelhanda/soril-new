@@ -12,28 +12,7 @@
         <div class="slider-hero-img d-none d-lg-block">
             <img class="img-fluid hero-right" src="{{ asset("assets/img/slider/slider2.jpg") }}" alt="">
         </div>
-        <div class="extra_info d-none d-lg-block">
-            <div class="extra-box">
-                <div class="slider-toltip d-flex align-items-center">
-                    <div class="close_icon"><i class="fal fa-times"></i></div>
-                    <div class="slider-toltip__thumb mr-25">
-                        <img src="assets/img/slider/toltip-img1.jpg" alt="">
-                    </div>
-                    <div class="slider-toltip__content">
-                        <div class="slider-toltip--meta mb-10">
-                            <span>{{ Carbon\Carbon::parse($annual->date)->format('F, d Y') }} /</span>
-                            <span>Durée : {{$annual->duree}} day(s) /</span>
-                            <span>{{$annual->lieu}} | {{$annual->ville}}</span>
-                        </div>
-                        <h6 class="slide-title">{{$annual->titre}}</h6>
-                        <p>{{$annual->description}}</p>
-                        <a class="theme_btn active-btn wow fadeInUp animated mt-10" data-wow-delay=".7s"
-                                        href="{{route('conference', $annual->id)}}">Voir plus
-                            <i class="far fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
             <div class=" container">
                 <div class="row">
