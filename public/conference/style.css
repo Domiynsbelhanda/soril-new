@@ -1055,3 +1055,36 @@ a {
 .anchor {
   display: block;
   height: 0px; }
+.packages {
+  margin-top: 30px;
+}
+div.package-item {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 15px;
+}
+.package-item .details {
+  background-color: #10a1d6;
+  color: #fff;
+  padding: 15px 30px;
+  min-width: 30%;
+  align-items: center;
+  justify-content: center ;
+  place-items: center;
+}
+
+.package-item .details > * {
+  color: #fff;
+}
+.package-item .description {
+  border: 4px solid #10a1d6;
+  padding: 20px 10px;
+}
+@media all and (max-width: 600px) {
+  div.package-item {
+    flex-flow: column;
+  }
+  .package-item .details {
+    width: 100%;
+  }
+}

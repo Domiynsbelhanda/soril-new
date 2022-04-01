@@ -192,18 +192,183 @@
           <h4>Price <span>per person</span></h4>
         </div>
       </div>
-      <div class="form">
+      <div class="form" style="padding-left: 10px">
+        <form action="{{url('register_evenement_post')}}" method="post" enctype="multipart/form-data">
+          @csrf
+          <input type="hidden" name="id" value="{{$annual->id}}">
+          <select name="title" required id="title" class="form-control" style="" required="">
+            <option value="mr">Monsieur</option>
+            <option value="mrs">Madame</option>
+            <option value="ms">Mademoiselle</option>
+          </select>
+          <input type="text" required name="firstname" placeholder="First Name"/>
+          <input type="text" required name="lastname" placeholder="Last Name"/>
+          <input type="text" required name="middleName" placeholder="Middle Name"/>
+          <input type="text" required name="email" placeholder="Email"/>
+          <select id="pays" name="pays" class="form-control">
+            @forelse (\App\Models\Country::all() as $item)
+                <option value="{{$item->code}}">{{$item->name}} </option>
+            @empty
 
-        <form action="#" method="post">
-          <input type="text" name="firstname" placeholder="First Name"/>
-          <input type="text" name="lastname" placeholder="Last Name"/>
-          <input type="text" name="email" placeholder="Email"/>
-          <input type="text" name="address" placeholder="Address"/>
-          <input type="text" name="zip" placeholder="Zip Code"/>
-          <input type="text" name="city" placeholder="City"/>
-          <input type="text" name="program" id="program" placeholder="Select your program on the right" disabled="disabled" />
-
-          <!--textarea name="message" placeholder="Your Message *"></textarea-->
+            @endforelse
+          </select>
+          <input type="text" required name="ville" placeholder="City"/>
+          <input type="text" required name="province" placeholder="State | Province"/>
+          <input type="text" required name="company" placeholder="Company"/>
+          <input type="text" required name="position" placeholder="Position"/>
+          <input type="text" required name="departement" placeholder="Department"/>
+          <select name="industrie">
+            <option value="">Area</option>
+            <option>Accounting</option>
+            <option>Airlines/Aviation</option>
+            <option>Alternative Dispute Resolution</option>
+            <option>Alternative Medicine</option>
+            <option>Animation</option>
+            <option>Apparel/Fashion</option>
+            <option>Architecture/Planning</option>
+            <option>Arts/Crafts</option>
+            <option>Automotive</option>
+            <option>Aviation/Aerospace</option>
+            <option>Banking/Mortgage</option>
+            <option>Biotechnology/Greentech</option>
+            <option>Broadcast Media</option>
+            <option>Building Materials</option>
+            <option>Business Supplies/Equipment</option>
+            <option>Capital Markets/Hedge Fund/Private Equity</option>
+            <option>Chemicals</option>
+            <option>Civic/Social Organization</option>
+            <option>Civil Engineering</option>
+            <option>Commercial Real Estate</option>
+            <option>Computer Games</option>
+            <option>Computer Hardware</option>
+            <option>Computer Networking</option>
+            <option>Computer Software/Engineering</option>
+            <option>Computer/Network Security</option>
+            <option>Construction</option>
+            <option>Consumer Electronics</option>
+            <option>Consumer Goods</option>
+            <option>Consumer Services</option>
+            <option>Cosmetics</option>
+            <option>Dairy</option>
+            <option>Defense/Space</option>
+            <option>Design</option>
+            <option>E-Learning</option>
+            <option>Education Management</option>
+            <option>Electrical/Electronic Manufacturing</option>
+            <option>Entertainment/Movie Production</option>
+            <option>Environmental Services</option>
+            <option>Events Services</option>
+            <option>Executive Office</option>
+            <option>Facilities Services</option>
+            <option>Farming</option>
+            <option>Financial Services</option>
+            <option>Fine Art</option>
+            <option>Fishery</option>
+            <option>Food Production</option>
+            <option>Food/Beverages</option>
+            <option>Fundraising</option>
+            <option>Furniture</option>
+            <option>Gambling/Casinos</option>
+            <option>Glass/Ceramics/Concrete</option>
+            <option>Government Administration</option>
+            <option>Government Relations</option>
+            <option>Graphic Design/Web Design</option>
+            <option>Health/Fitness</option>
+            <option>Higher Education/Acadamia</option>
+            <option>Hospital/Health Care</option>
+            <option>Hospitality</option>
+            <option>Human Resources/HR</option>
+            <option>Import/Export</option>
+            <option>Individual/Family Services</option>
+            <option>Industrial Automation</option>
+            <option>Information Services</option>
+            <option>Information Technology/IT</option>
+            <option>Insurance</option>
+            <option>International Affairs</option>
+            <option>International Trade/Development</option>
+            <option>Internet</option>
+            <option>Investment Banking/Venture</option>
+            <option>Investment Management/Hedge Fund/Private Equity</option>
+            <option>Judiciary</option>
+            <option>Law Enforcement</option>
+            <option>Law Practice/Law Firms</option>
+            <option>Legal Services</option>
+            <option>Legislative Office</option>
+            <option>Leisure/Travel</option>
+            <option>Library</option>
+            <option>Logistics/Procurement</option>
+            <option>Luxury Goods/Jewelry</option>
+            <option>Machinery</option>
+            <option>Management Consulting</option>
+            <option>Maritime</option>
+            <option>Market Research</option>
+            <option>Marketing/Advertising/Sales</option>
+            <option>Mechanical or Industrial Engineering</option>
+            <option>Media Production</option>
+            <option>Medical Equipment</option>
+            <option>Medical Practice</option>
+            <option>Mental Health Care</option>
+            <option>Military Industry</option>
+            <option>Mining/Metals</option>
+            <option>Motion Pictures/Film</option>
+            <option>Museums/Institutions</option>
+            <option>Music</option>
+            <option>Nanotechnology</option>
+            <option>Newspapers/Journalism</option>
+            <option>Non-Profit/Volunteering</option>
+            <option>Oil/Energy/Solar/Greentech</option>
+            <option>Online Publishing</option>
+            <option>Other Industry</option>
+            <option>Outsourcing/Offshoring</option>
+            <option>Package/Freight Delivery</option>
+            <option>Packaging/Containers</option>
+            <option>Paper/Forest Products</option>
+            <option>Performing Arts</option>
+            <option>Pharmaceuticals</option>
+            <option>Philanthropy</option>
+            <option>Photography</option>
+            <option>Plastics</option>
+            <option>Political Organization</option>
+            <option>Primary/Secondary Education</option>
+            <option>Printing</option>
+            <option>Professional Training</option>
+            <option>Program Development</option>
+            <option>Public Relations/PR</option>
+            <option>Public Safety</option>
+            <option>Publishing Industry</option>
+            <option>Railroad Manufacture</option>
+            <option>Ranching</option>
+            <option>Real Estate/Mortgage</option>
+            <option>Recreational Facilities/Services</option>
+            <option>Religious Institutions</option>
+            <option>Renewables/Environment</option>
+            <option>Research Industry</option>
+            <option>Restaurants</option>
+            <option>Retail Industry</option>
+            <option>Security/Investigations</option>
+            <option>Semiconductors</option>
+            <option>Shipbuilding</option>
+            <option>Sporting Goods</option>
+            <option>Sports</option>
+            <option>Staffing/Recruiting</option>
+            <option>Supermarkets</option>
+            <option>Telecommunications</option>
+            <option>Textiles</option>
+            <option>Think Tanks</option>
+            <option>Tobacco</option>
+            <option>Translation/Localization</option>
+            <option>Transportation</option>
+            <option>Utilities</option>
+            <option>Venture Capital/VC</option>
+            <option>Veterinary</option>
+            <option>Warehousing</option>
+            <option>Wholesale</option>
+            <option>Wine/Spirits</option>
+            <option>Wireless</option>
+            <option>Writing/Editing</option>
+          </select>
+          <input type="tel" class="form-control shape" required="" name="phone" placeholder="Phone">
+          <input type="tel" class="form-control shape" required="" name="phoneBureau" placeholder="Office phone">
           <button name="submit" type="submit">Confirm Your Order</button>
         </form>
       </div>
