@@ -104,10 +104,10 @@
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-12">
                             <div class="section-title white-title text-left mb-45">
                                 <!-- <h6 class="left_line pl-55">Features</h6> -->
-                                <h2>What Guide Us</h2>
+                                <h2 style="color: #00aa55">What Guide Us</h2>
                                 <p class="mt-10" style="color: #c4c4c4;">
                                     With the expiry of the previous Strategic Plan in 2019, 
                                     SoRil decided to embark on the development of a new Strategic 
@@ -120,11 +120,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="features text-center mb-30">
-                                <div class="features__icon mb-30">
-                                    <i class="flaticon-briefcase"></i>
-                                </div>
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Purpose</h5>
                                     <p class="mb-10">
@@ -135,11 +132,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="features text-center mb-30">
-                                <div class="features__icon mb-30">
-                                    <i class="flaticon-parking"></i>
-                                </div>
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Mission</h5>
                                     <p class="mb-10">
@@ -151,11 +145,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
                             <div class="features text-center mb-30">
-                                <div class="features__icon mb-30">
-                                    <i class="flaticon-hotel"></i>
-                                </div>
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Vision</h5>
                                     <p class="mb-10">
