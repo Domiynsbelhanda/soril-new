@@ -271,12 +271,12 @@
 <!-- back to top ends! -->
 
 
-<script src="scripts/jquery-1.11.0.min.js"></script>
-<script src="scripts/jquery-ui-1.11.2/jquery-ui.min.js"></script>
-<script src="scripts/flexslider/jquery.flexslider-min.js"></script>
-<script src="scripts/jquery.parallax-1.1.3.js"></script>
-<script src="scripts/jquery.inview.min.js"></script>
-<script src="scripts/form.js"></script>
-<script src="scripts/theme.js"></script>
+<script src="{{ asset("conference/scripts/jquery-1.11.0.min.js") }}"></script>
+<script src="{{ asset("conference/scripts/jquery-ui-1.11.2/jquery-ui.min.js") }}"></script>
+<script src="{{ asset("conference/scripts/flexslider/jquery.flexslider-min.js") }}"></script>
+<script src="{{ asset("conference/scripts/jquery.parallax-1.1.3.js") }}"></script>
+<script src="{{ asset("conference/scripts/jquery.inview.min.js") }}"></script>
+<script src="{{ asset("conference/scripts/form.js") }}"></script>
+<script src="{{ asset("conference/scripts/theme.js") }}"></script>
 </body>
 </html>
