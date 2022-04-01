@@ -8,29 +8,22 @@
     @php
         $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
     @endphp
-    <div class="slider-area slider-area-02 heding-bg pos-rel">
-        <div class="slider-hero-img d-none d-lg-block">
-            <img class="img-fluid hero-right" src="{{ asset("assets/img/slider/slider2.jpg") }}" alt="">
-        </div>
-       
-        <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
-            <div class=" container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="slider__content slider__content_02 text-left">
-                            <h1 class="main-title mb-35 wow fadeInUp animated" data-wow-delay=".3s">Soril Library</h1>
-                            <ul class="btn-list mb-45">
-                                <li><a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".7s"
-                                        href="#books">Books<i
-                                            class="far fa-long-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+    <section class="page-title-area" style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+        <div class="container" >
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3">
+                    <div class="page-title text-center">
+                        <h1>Soril Library</h1>
+                        <li><a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".7s"
+                            href="#books">Books<i
+                                class="far fa-long-arrow-down"></i></a>
+                        </li>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    
     <section class="events-list-area pt-40 pb-10">
         <div class="container">
             <div class="row">

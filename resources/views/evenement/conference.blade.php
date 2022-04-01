@@ -8,6 +8,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset("assets/img/logo/icon.png") }}">
 <link href="{{ asset("conference/font-awesome-4.2.0/css/font-awesome.min.css") }}" rel="stylesheet" />
 <link href="{{ asset("conference/scripts/jquery-ui-1.11.2/jquery-ui.min.css") }}" rel="stylesheet" />
 <link href="{{ asset("conference/animate.min.css") }}" rel="stylesheet" />
@@ -23,7 +24,9 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#speakers">speakers</a></li>
+        <li><a href="#registration">registration</a></li>
         <li><a href="#scheadule">schedule</a></li>
+        <li><a href="#venue">venue</a></li>
         <li><a href="#sponsors">sponsors</a></li>
         <li><a href="{{route('opportunity')}}">Sponsorship Opportunity</a></li>
         <li><a href="https://www.soril.org">back to soril</a></li>       
@@ -183,7 +186,12 @@
       <h2>Pricing & Registration</h2>
 
       <h3>Fill out your information</h3>
-
+      <div class="price">
+        <div>
+          <p class="amount">${{$annual->prix}}</p>
+          <h4>Price <span>per person</span></h4>
+        </div>
+      </div>
       <div class="form">
 
         <form action="#" method="post">
@@ -199,15 +207,66 @@
           <button name="submit" type="submit">Confirm Your Order</button>
         </form>
       </div>
-      <div class="price">
-        <div>
-          <p class="amount">${{$annual->prix}}</p>
-          <h4>Price <span>per person</span></h4>
-        </div>
-      </div>
+      
     </div>
   </div>
   <!-- registration ends! -->
+  <a id="venue" class="anchor"></a>
+
+  <div class="location">
+    <div class="container">
+
+      <h2>Location and Venue</h2>
+      {{-- <p class="subtitle">area full of great hotels and restaurants.</p> --}}
+
+      <!-- info -->
+      <div class="info">
+
+        <div class="maps">
+
+          <div class="images">
+            <img src="images/placeholder.jpg" />
+          </div>
+          <div class="images">
+            <img src="images/placeholder.jpg" />
+          </div>
+
+
+        </div>
+
+        <div class="address">
+
+          {{-- <h4>Spend three inspiring days in the cultural and cosmopolitan city of London. The area is full of great hotels, restaurants and galleries.</h4> --}}
+
+          <h5><i class="fa fa-chevron-right"></i> Venue</h5>
+
+          <div class="venue">
+            <p><span>{{$annual->lieu}}</span></p>
+            <p>{{$annual->ville}}</p>
+            <a  href="mailto:reservations@soril.org">reservations@soril.org</a>
+          </div>
+
+          <h5><i class="fa fa-chevron-right"></i> Nearby Accomodation</h5>
+
+          <div class="venue">
+            <p><span>Town and Country Resort & Convention Center</span></p>
+            <p>500 Hotel Circle North</p>
+            <p>San Diego, CA 92108</p>
+            <a href="#">Book Online</a>
+          </div>
+
+          <div class="venue">
+            <p><span>Town and Country Resort & Convention Center</span></p>
+            <p>500 Hotel Circle North</p>
+            <p>San Diego, CA 92108</p>
+            <a href="#">Book Online</a>
+          </div>
+        </div>
+      </div>
+      <!-- info ends! -->
+    
+    </div>
+  </div>
 
   <a id="sponsors" class="anchor"></a>
 

@@ -166,7 +166,12 @@ a {
     position: relative;
     min-height: 665px; }
   .header .menu {
-    background: rgba(16, 161, 214, 0.8); }
+    background: rgba(16, 161, 214, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+   }
   .header ul {
     list-style-type: none;
     padding: 15px 60px;
@@ -182,6 +187,14 @@ a {
         font-weight: 300; }
         .header ul li a:hover, .header ul li a.active {
           color: black; }
+          .header ul li::after {
+            content: "|";
+            color: #fff;
+            margin-left: 5px;
+          }
+          .header ul li:last-child::after {
+            content: none;
+          }
   .header h1 {
     padding-top: 100px;
     margin-bottom: 0; }
@@ -308,10 +321,14 @@ a {
 
 /* 7. Speakers */
 .featured {
-  background: #10a1d6; }
+  background: #10a1d6;
+  margin-top: 30px;
+}
   .featured img {
     float: left;
-    width: 100%; }
+    width: auto;
+    max-height: 400px;
+  }
   .featured h3, .featured .title {
     line-height: 1.1em;
     font-weight: 300; }
@@ -344,7 +361,9 @@ a {
       .featured div {
         width: 100%; } }
     .featured div.image {
+      width: auto;
       padding: 0; }
+      
 
 .single {
   width: 25%;
@@ -934,7 +953,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999; }
+  z-index: 9998; }
 
 .contact-form {
   padding: 50px 72px 72px;
