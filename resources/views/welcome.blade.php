@@ -138,7 +138,49 @@
                                 </div>
                                 <div class="portfolio__content">
                                     <p class="mb-35">
-                                        
+                                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#bio">
+                                            Bio
+                                        </button>
+                                        <div class="modal fade" id="bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Mimile Mukuna Maisha</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                   <p class="mb-30">
+                                                    Mimile is an expert in International Business Law and International 
+                                                    Business Risk Management.
+                                                    Since 2013, he has been CEO of First Continental 
+                                                    Legal and Risk Consulting where he advises on International 
+                                                    Business Law, International Business Risk Management and on 
+                                                    international financing transactions.
+                                                   </p>
+                                                    
+                                                    <p class="mb-30">
+                                                        His expertise has been sought by transnational companies, governments 
+                                                    and professional bodies. He previously spent 20 years in the 
+                                                    insurance/risk finance industry where he occupied executive 
+                                                    positions in various companies in different African countries.
+                                                    </p>
+                                                    
+                                                    <p class="mb-30">
+                                                        He is a regular speaker at conferences and seminars on International
+                                                     Business Risk Management and international investment/trade law 
+                                                     topics and has made it his mission to promote the principle and 
+                                                     practice of risk leadership in the business world. he is the author 
+                                                     of the book titled "Why Risk so Much For so Little published in 2011.
+                                                    </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                     </p>
                                 </div>
                             </div>
@@ -157,7 +199,7 @@
                                                     <div class="feature-03__content">
                                                         <h5>{{$item->titreMessage}}</h5>
                                                         <p>{{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}</p>
-                                                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#messageModal-{{$item->id}}">
+                                                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#messageModal-{{$item->id}}">
                                                             Read full message
                                                         </button>
                                                     </div>
@@ -168,7 +210,10 @@
                                                   <div class="modal-content">
                                                     <div class="modal-header">
                                                       <h5 class="modal-title" id="staticBackdropLabel">{{$item->titreMessage}}</h5>
-                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        
                                                     </div>
                                                     <div class="modal-body">
                                                         <div>
@@ -190,7 +235,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                     </div>
                                                   </div>
                                                 </div>
