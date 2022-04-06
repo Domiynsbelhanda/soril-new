@@ -239,7 +239,7 @@
     </section>
     <!-- strategic-objective end -->
     <!--counsilor-area start-->
-    <section class="counsilor-area pt-95 pb-115">
+    <section class="counsilor-area-02 pt-40 pb-70">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3">
@@ -248,28 +248,27 @@
                     </div>
                 </div>
             </div>
-            <div class="team-wrapper">
-                <div class="row team-active">
-                    @forelse($secretariats as $sec)
-                    <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="counsilors">
-                            <div class="counsilors__img">
-                                <div class="counsilors__img--box mr-10 ml-50">
-                                    <img src="{{asset($sec->image)}}" width="200px" alt="">
+            <div class="row">
+                @forelse($secretariats as $sec)
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="counsilors counsilors-02 counsilor-03 white-bg mb-30">
+                            <div class="counsilors__img pos-rel mb-20">
+                                <div class="counsilors__img--box">
+                                    <img src="{{asset($sec->image)}}" alt="">
+                                </div>
+                                <div class="signature pos-abl">
+                                    {{-- <img src="assets/img/team/signature2.png" alt=""> --}}
                                 </div>
                             </div>
-                            <div class="counsilors__content mt-10">
-                                <div class="counsilors__content--meta align-items-center mb-25 text-center">
-                                    <h5 class="semi-title">{{$sec->prenom . ' ' . $sec->nom}}</h5>
-                                    <span>{{$sec->type}}</span>
-                                </div>
+                            <div class="counsilors__content">
+                                <span class="mb-10">{{$sec->type}}</span>
+                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
                             </div>
                         </div>
-                    </div>        
+                    </div> 
                     @empty
                         
                     @endforelse
-                </div>
             </div>
             <div class="row mt-30">
                 <div class="col-xl-6 offset-xl-3">
@@ -278,28 +277,27 @@
                     </div>
                 </div>
             </div>
-            <div class="team-wrapper">
-                <div class="row team-active">
-                    @forelse($admins as $admin)
-                    <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="counsilors">
-                            <div class="counsilors__img">
-                                <div class="counsilors__img--box mr-10 ml-50">
-                                    <img src="{{asset($admin->image)}}" width="200px" alt="">
+            <div class="row">
+                @forelse($admins as $admin)
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="counsilors counsilors-02 counsilor-03 white-bg mb-30">
+                            <div class="counsilors__img pos-rel mb-20">
+                                <div class="counsilors__img--box">
+                                    <img src="{{asset($admin->image)}}" alt="">
+                                </div>
+                                <div class="signature pos-abl">
+                                    {{-- <img src="assets/img/team/signature2.png" alt=""> --}}
                                 </div>
                             </div>
-                            <div class="counsilors__content mt-10">
-                                <div class="counsilors__content--meta align-items-center mb-25 text-center">
-                                    <h5 class="semi-title">{{$admin->prenom . ' ' . $admin->nom}}</h5>
-                                    <span>{{$admin->position}}</span>
-                                </div>
+                            <div class="counsilors__content">
+                                <span class="mb-10">{{$admin->position}}</span>
+                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
                             </div>
                         </div>
-                    </div>        
-                    @empty
+                    </div> 
+                @empty
                         
-                    @endforelse
-                </div>
+                @endforelse
             </div>
             <div class="row mt-30">
                 <div class="col-xl-6 offset-xl-3">
@@ -308,28 +306,27 @@
                     </div>
                 </div>
             </div>
-            <div class="team-wrapper">
-                <div class="row team-active">
-                    @forelse($consultatifs as $cons)
-                    <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="counsilors">
-                            <div class="counsilors__img">
-                                <div class="counsilors__img--box mr-10 ml-50">
-                                    <img src="{{asset($cons->image)}}" width="200px" alt="">
-                                </div>
+            <div class="row">
+                @forelse($consultatifs as $cons)
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="counsilors counsilors-02 counsilor-03 white-bg mb-30">
+                        <div class="counsilors__img pos-rel mb-20">
+                            <div class="counsilors__img--box">
+                                <img src="{{asset($cons->image)}}" alt="">
                             </div>
-                            <div class="counsilors__content mt-10">
-                                <div class="counsilors__content--meta align-items-center mb-25 text-center">
-                                    <h5 class="semi-title">{{$cons->prenom . ' ' . $cons->nom}}</h5>
-                                    <span>{{$cons->type}}</span>
-                                </div>
+                            <div class="signature pos-abl">
+                                {{-- <img src="assets/img/team/signature2.png" alt=""> --}}
                             </div>
                         </div>
-                    </div>        
-                    @empty
-                        
-                    @endforelse
-                </div>
+                        <div class="counsilors__content">
+                            <span class="mb-10">{{$cons->type}}</span>
+                            <h5 class="semi-title mb-20"><a href="team-details.html">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
+                        </div>
+                    </div>
+                </div> 
+                @empty
+                    
+                @endforelse
             </div>
         </div>
     </section>
