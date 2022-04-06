@@ -14,10 +14,6 @@
                 <div class="col-xl-6 offset-xl-3">
                     <div class="page-title text-center">
                         <h1>Soril Library</h1>
-                        <li><a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".7s"
-                            href="#books">Books<i
-                                class="far fa-long-arrow-down"></i></a>
-                        </li>
                     </div>
                 </div>
             </div>
@@ -28,20 +24,15 @@
         <div class="container">
             <div class="row">
                 <h1 class="col-md-10 col-sm-8">Featured Book</h1>
-                <div class="col-md-2 col-sm-4">
-                    <a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".3s"
-                                        href="#books">More Books<i
-                                            class="far fa-long-arrow-right"></i></a>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-xl-12">
+            <div class="row justify-content-center pt-50">
+                <div class="col-xl-6">
                     <div class="events-seminar-img mb-45">
                         <img class="img-fluid" src="{{asset($books->first()->bo_picture)}}" alt="">
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="right-events-area pr-40">
                         <div class="events-widget mb-40">
@@ -73,7 +64,8 @@
                                 </li>
                             </ul>
                             <a href="https://www.library.soril.org/public/?link={{asset($books->first()->bo_file)}}" class="theme_btn widget-btn">Read more</a>
-                            <a href="#books" class="theme_btn widget-btn">More books</a>
+                            <a href="#books" class="theme_btn active-btn wow fadeInUp animated widget-btn green-bg">More books</a>
+                            
                         </div>
                     </div>
                 </div>
