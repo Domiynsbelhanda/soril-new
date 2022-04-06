@@ -139,9 +139,9 @@
                                 </div>
                                 <div class="portfolio__content">
                                     <p class="mb-35">
-                                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#bio">
+                                        <a href="{{ route("presidentbio") }}"  class="btn btn-link">
                                             Bio
-                                        </button>
+                                        </a>
                                         <div class="modal fade" id="bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

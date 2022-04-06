@@ -169,10 +169,15 @@
                     <div class="services-right-area pl-50">
                         <div class="widget mb-40">
                             <ul class="widget-list-with-links">
-                                <li class="list-item"><a href="#">Register as author</a></li>
-                                <li class="list-item"><a href="#">Submit an article</a></li>
-                                <li class="list-item"><a href="#">Subscribe to journal</a></li>
-                                <li class="list-item"><a href="#">View articles</a></li>
+                                <li class="list-item"><a href="{{route('author.index')}}">Register as author</a></li>
+                                <li class="list-item"><a href="{{route('article.index')}}">Submit an article</a></li>
+                                <li class="list-item"><a href="{{route('subscribe')}}">Subscribe to journal</a></li>
+                                @if (session('subscribe'))
+                                <li class="list-item">
+                                    <a href="{{route('shows', ['id'=>session('subscribe')])}}">Subscribe Profile</a>
+                                </li>
+                                @endif
+                                <li class="list-item"><a href="{{route('artis')}}">View articles</a></li>
                             </ul>
                         </div>
                         <div class="widget mb-40">

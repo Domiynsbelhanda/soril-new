@@ -6260,6 +6260,10 @@ input.main-search-input:-ms-input-placeholder {
   color: #3a3d3e;
   border: 2px solid #ededed;
 }
+.events-widget .widget-btn.green-bg {
+  background-color: #00954a;
+  color: #f7f7f7;
+}
 @media (max-width: 767px) {
   .events-widget .widget-btn {
     padding: 19px 50px;

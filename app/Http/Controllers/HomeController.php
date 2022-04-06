@@ -39,6 +39,11 @@ class HomeController extends Controller
         ]);
     }
 
+    public function bio(Request $request)
+    {
+        return view("team-details");
+    }
+
     public function library(Request $request){
 
         $book = book::orderBy('bo_id', 'desc')->get();
