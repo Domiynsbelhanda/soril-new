@@ -6,40 +6,23 @@
 
 @section('content')
     <!-- -------- START HEADER 7 w/ text and video ------- -->
-    <header class="bg-gradient-dark">
-        <div class="page-header min-vh-75" style="background-image: url('assets/img/office-dark.jpg');">
-            <span class="mask bg-gradient-dark opacity-8"></span>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center mx-auto my-auto">
-                        <h1 class="text-white">Job Offers</h1>
-                        <h6 class="text-white">
-                            SORIL membership is restricted to risk professionals involved in
+    <section class="page-title-area" style="background: linear-gradient(#03072e98, #03072eb9), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+        <div class="container" >
+            <div class="row">
+                <div class="col-xl-4 offset-xl-4">
+                    <div class="page-title text-center">
+                        <h1>Job Offers</h1>
+                        <p>SORIL membership is restricted to risk professionals involved in
 
                             Risk Management for their organisation in Countries
 
-                            where there is not a Risk Management Association
-                        </h6>
+                            where there is not a Risk Management Association</p>
                     </div>
                 </div>
             </div>
-            <div class="position-absolute w-100 z-index-1 bottom-0">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="moving-waves">
-                        <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
-                        <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
-                        <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
-                        <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,1" />
-                    </g>
-                </svg>
-            </div>
         </div>
-    </header>
+    </section>
+   
     <!-- -------- END HEADER 7 w/ text and video ------- -->
 
     <section class="py-2">
@@ -147,12 +130,12 @@
                                     </p>
 
                                     <button type="button" class="btn bg-gradient-dark w-auto me-1 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#job-{{$emploi->id}}"
+                                            data-toggle="modal" data-target="#job-{{$emploi->id}}"
                                     >View
                                     </button>
 
                                     <button type="button" class="btn bg-gradient-dark w-auto me-1 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#job-apply-{{$emploi->id}}"
+                                            data-toggle="modal" data-target="#job-apply-{{$emploi->id}}"
                                     >Apply
                                     </button>
                                 </div>
@@ -185,7 +168,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn bg-gradient-info" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn bg-gradient-info" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +242,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn bg-gradient-info"
-                                                data-bs-dismiss="modal">Close</button>
+                                                data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
