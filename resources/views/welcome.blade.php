@@ -37,11 +37,12 @@
                 <div class="col-xl-6">
                     <div class="slider__content slider__content_02 text-left">
                         {{-- <span class="sub-title left_line mb-15  pl-55">Society Of Risk Leadership</span> --}}
+                        <span class="sub-title left_line mb-15  pl-55">Discover Soril</span>
                         <h1 class="main-title mb-35 wow fadeInUp animated" data-wow-delay=".3s">Learn more about Risk Leadership
                             in the President's Coner.</h1>
-                        <ul class="btn-list mb-45">
+                        <ul class="btn-list mb-45" >
                             <li><a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".7s"
-                                    href="#corner">Messages<i
+                                    href="#corner">Visit<i
                                         class="far fa-long-arrow-down"></i></a>
                             </li>
                         </ul>
@@ -225,13 +226,13 @@
                                                         <br>
 
                                                         <p class="text-sm mb-0">
-                                                            {{$item->message}}
+                                                            {!!$item->message!!}
                                                         </p>
                                                         <br>
                                                         <br>
 
                                                         <p>
-                                                            {{$item->about}}
+                                                            {!!$item->about!!}
                                                         </p>
                                                     </div>
                                                     <div class="modal-footer">
