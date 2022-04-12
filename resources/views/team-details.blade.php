@@ -44,7 +44,7 @@
                 <div class="biographs">
                     <h3 class="biographs-title">Biography</h3>
                     <div class="biographs__content row">
-                        <div class="col-7">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <p class="mb-30">
                                 Mimile is an expert in International Business Law and International 
                                 Business Risk Management.
