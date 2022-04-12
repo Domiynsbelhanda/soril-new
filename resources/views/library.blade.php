@@ -63,7 +63,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="https://www.library.soril.org/public/?link={{asset($books->first()->bo_file)}}" class="theme_btn widget-btn">Read more</a>
+                            <a href="{{asset($books->first()->bo_picture)}}" class="theme_btn widget-btn">Read more</a>
                             <a href="#books" class="theme_btn active-btn wow fadeInUp animated widget-btn green-bg">More books</a>
                             
                         </div>
@@ -77,14 +77,14 @@
             <h1 class="text-center mb-30 mt-30">Books</h1>
             <div class="row">
                 @forelse ($books as $items)
-                @if ($items->bo_cat_id == 1)
+                @if ($items->bo_id != $books->first()->bo_id)
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="services-05 fix mb-30 pos-rel">
-                        <div class="services-05__img"><img src="assets/img/service/01.jpg" alt=""></div>
+                        <div class="services-05__img"><img src="{{asset($items->bo_picture)}}" alt=""></div>
                         <div class="services-05__content pos-abl " style="background-image: url(assets/img/service/service-bg3.png);">
                             <div class="services-title pos-rel mb-15">
                                 <h6 class="left_line pl-55">{{$items->bo_author}}</h6>
-                                <h4><a href="https://www.library.soril.org/public/?link={{asset($items->first()->bo_file)}}">{{$items->bo_title}}</a></h4>
+                                <h4><a href="https://www.library.soril.org/public/?link={{asset($items->bo_file)}}">{{$items->bo_title}}</a></h4>
                             </div>
                             <ul class="services-05-list">
                                 <li>Price: <span>${{$items->bo_price}}</span></li>

@@ -43,6 +43,7 @@ Route::get('/', function (){
 
 Route::get('home', [HomeController::class, 'home'])->name('home'); // Use in soril
 Route::get('president-bio', [HomeController::class, 'bio'])->name('presidentbio'); // Use in soril
+Route::get('bio', [HomeController::class, 'bio'])->name('bio'); // Use in soril
 
 /*
  * Library and publication
