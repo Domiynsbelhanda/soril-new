@@ -174,71 +174,64 @@
                             </div>
                         </div>
 
-                        <div class="modal fade" id="job-apply-{{$emploi->id}}" tabindex="-1"
+                        <div class="modal" id="job-apply-{{$emploi->id}}" tabindex="-1"
                              role="dialog" aria-labelledby="LoginLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <br>
-                                            <h4>Apply for {{$emploi->titre}}</h4>
-                                            <form action="{{route('candidat')}}" method="POST" enctype="multipart/form-data">
-                                                @csrf
-                                                <div class="form-input">
-                                                    <label>
-                                                        Firstname <span class="red">*</span></label>
-                                                    <input type="text" class="form-control shape" required="" name="FirstName">
-                                                </div>
-                                                <div class="form-input">
-                                                    <label>
-                                                        LastName <span class="red"></span></label>
-                                                    <input type="text" class="form-control shape" name="MiddleName">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <label>
-                                                        MiddleName <span class="red">*</span></label>
-                                                    <input type="text" class="form-control shape" required="" name="LastName">
-                                                </div>
-
-
-                                                <div class="form-input">
-                                                    <label>Email<span class="red">*</span></label>
-                                                    <input type="text" class="form-control shape" required="" name="email">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <label>
-                                                        State *<span class="red">*</span></label>
-                                                    <input type="text" class="form-control shape" required="" name="state">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <label>
-                                                        City <span class="red">*</span></label>
-                                                    <input type="text" class="form-control shape" required="" name="city">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <label>
-                                                        Birthday date <span class="red">*</span></label>
-                                                    <input type="date" class="form-control shape" required="" name="date">
-                                                </div>
-                                                <div class="form-input">
-                                                    <label>
-                                                        Phone Number <span class="red">*</span></label>
-                                                    <input type="tel" class="form-control shape" required="" name="phone">
-                                                </div>
-                                                <div class="form-input">
-                                                    <label>Download your CV here</label>
-                                                    <input class="form-control shape" type="file" name="file">
-                                                </div>
-                                                <div>
-                                                    <input type="submit" class="btn btn-md main-bg shape"
-                                                           value="APPLY">
-                                                </div>
-                                            </form>
-                                        </div>
+                                    <div class="modal-header">
+                                        <h4>Apply for {{$emploi->titre}}</h4>
+                                    </div>
+                                    <div class="modal-body mt-10">
+                                        <form action="{{route('candidat')}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="form-group">
+                                                <label>
+                                                    Firstname <span class="red">*</span></label>
+                                                <input type="text" class="form-control shape" required="" name="FirstName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    LastName <span class="red"></span></label>
+                                                <input type="text" class="form-control shape" name="MiddleName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    MiddleName <span class="red">*</span></label>
+                                                <input type="text" class="form-control shape" required="" name="LastName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email<span class="red">*</span></label>
+                                                <input type="text" class="form-control shape" required="" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    State *<span class="red">*</span></label>
+                                                <input type="text" class="form-control shape" required="" name="state">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    City <span class="red">*</span></label>
+                                                <input type="text" class="form-control shape" required="" name="city">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    Birthday date <span class="red">*</span></label>
+                                                <input type="date" class="form-control shape" required="" name="date">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>
+                                                    Phone Number <span class="red">*</span></label>
+                                                <input type="tel" class="form-control shape" required="" name="phone">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Download your CV here</label>
+                                                <input class="form-control shape" type="file" name="file">
+                                            </div>
+                                            <div>
+                                                <input type="submit" class="btn btn-primary btn-block btn-md main-bg shape"
+                                                       value="APPLY">
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn bg-gradient-info"
