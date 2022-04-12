@@ -106,7 +106,7 @@
                                         </h3>
                                     </div>
                                     <div class="event__content">
-                                        <h3 class="event-title mb-15">{{$event->titre}}</h3>
+                                        <h3 class="event-title mb-15" style="word-break: break-all">{{$event->titre}}</h3>
                                         <div class="event__content--meta mb-35">
                                             <span><i class="fal fa-map"></i> {{$annual->lieu}} | {{$annual->ville}}</span>
                                             <span> Durée : {{$annual->duree}} jour(s)</span>

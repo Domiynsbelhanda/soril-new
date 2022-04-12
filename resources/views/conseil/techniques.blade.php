@@ -151,21 +151,16 @@
                             </div>
                         </div>
                         <div class="services-wrap-content row">
-                            <div class="col-xl-5 col-lg-6 col-md-6">
-                                <div class="services-wrap-content__thumb mb-30">
-                                    <img src="assets/img/service/04.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-lg-6 col-md-6">
+                            <div class="col-12">
                                 <div class="services-details-list pl-30 mb-30">
                                     <h4 class="mb-15">Receive Your Certification in 5 Steps!</h4>
                                     
-                                    <ol class="blog-details__list mt-20">
-                                        <li><a href="#">Read program description and eligibility criteria to view important information that will help you be a successful candidate</a></li>
-                                        <li><a href="#">Submit your application online with all required documentation</a></li>
-                                        <li><a href="#">Successful applicants will receive username and password to their online learning portal where they can download study materials and practice questions</a></li>
-                                        <li><a href="#">Choose an examination date, prepare for it and take the 2.5-hour online examination consisting of 125 multiple choice questions</a></li>
-                                        <li><a href="#">Upon passing, successful candidates will receive their certification card and acknowledged as a CARL holder!</a></li>
+                                    <ol class="blog-details__list mt-20 row">
+                                        <li class="col-lg-6 col-xs-12 col-sm-12"><a href="#">Read program description and eligibility criteria to view important information that will help you be a successful candidate</a></li>
+                                        <li class="col-lg-6 col-xs-12 col-sm-12"><a href="#">Submit your application online with all required documentation</a></li>
+                                        <li class="col-lg-6 col-xs-12 col-sm-12"><a href="#">Successful applicants will receive username and password to their online learning portal where they can download study materials and practice questions</a></li>
+                                        <li class="col-lg-6 col-xs-12 col-sm-12"><a href="#">Choose an examination date, prepare for it and take the 2.5-hour online examination consisting of 125 multiple choice questions</a></li>
+                                        <li class="col-lg-6 col-xs-12 col-sm-12"><a href="#">Upon passing, successful candidates will receive their certification card and acknowledged as a CARL holder!</a></li>
                                     </ol>
                                 </div>
                             </div>

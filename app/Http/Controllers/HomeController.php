@@ -48,7 +48,6 @@ class HomeController extends Controller
 
         $book = book::orderBy('bo_id', 'desc')->get();
         $category = category::all();
-
         return view('library', [
                 'books'=>$book,
                 'categories'=>$category
