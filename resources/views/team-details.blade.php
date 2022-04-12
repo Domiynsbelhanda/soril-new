@@ -43,31 +43,33 @@
             <div class="col-xl-12">
                 <div class="biographs">
                     <h3 class="biographs-title">Biography</h3>
-                    <div class="biographs__content">
-                        <p class="mb-30">
-                            Mimile is an expert in International Business Law and International 
-                            Business Risk Management.
-                            Since 2013, he has been CEO of First Continental 
-                            Legal and Risk Consulting where he advises on International 
-                            Business Law, International Business Risk Management and on 
-                            international financing transactions.
-                           </p>
-                            
+                    <div class="biographs__content row">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <p class="mb-30">
-                                His expertise has been sought by transnational companies, governments 
-                            and professional bodies. He previously spent 20 years in the 
-                            insurance/risk finance industry where he occupied executive 
-                            positions in various companies in different African countries.
+                                Mimile is an expert in International Business Law and International 
+                                Business Risk Management.
+                                Since 2013, he has been CEO of First Continental 
+                                Legal and Risk Consulting where he advises on International 
+                                Business Law, International Business Risk Management and on 
+                                international financing transactions.
                             </p>
-                            
-                            <p class="mb-30">
-                                He is a regular speaker at conferences and seminars on International
-                             Business Risk Management and international investment/trade law 
-                             topics and has made it his mission to promote the principle and 
-                             practice of risk leadership in the business world. he is the author 
-                             of the book titled "Why Risk so Much For so Little published in 2011.
-                            </p>
+                                
+                                <p class="mb-30">
+                                    His expertise has been sought by transnational companies, governments 
+                                and professional bodies. He previously spent 20 years in the 
+                                insurance/risk finance industry where he occupied executive 
+                                positions in various companies in different African countries.
+                                </p>
+                                
+                                <p class="mb-30">
+                                    He is a regular speaker at conferences and seminars on International
+                                 Business Risk Management and international investment/trade law 
+                                 topics and has made it his mission to promote the principle and 
+                                 practice of risk leadership in the business world. he is the author 
+                                 of the book titled "Why Risk so Much For so Little published in 2011.
+                                </p>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>

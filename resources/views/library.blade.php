@@ -84,7 +84,7 @@
                         <div class="services-05__content pos-abl " style="background-image: url(assets/img/service/service-bg3.png);">
                             <div class="services-title pos-rel mb-15">
                                 <h6 class="left_line pl-55">{{$items->bo_author}}</h6>
-                                <h4><a href="https://www.library.soril.org/public/?link={{asset($items->bo_file)}}">{{$items->bo_title}}</a></h4>
+                                <h4><a target="_blank" href="https://www.library.soril.org/public/?link={{asset($items->bo_file)}}">{{$items->bo_title}}</a></h4>
                             </div>
                             <ul class="services-05-list">
                                 <li>Price: <span>${{$items->bo_price}}</span></li>
