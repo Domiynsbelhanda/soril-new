@@ -101,15 +101,17 @@
                             <div class="event mb-50" style="background-image: url(assets/img/events/events5.jpg);">
                                 <div class="event--front d-flex">
                                     <div class="event__date mr-40">
-                                        <h3>{{ Carbon\Carbon::parse($annual->date)->format('d') }} 
+                                        <h3>
+                                            {{ Carbon\Carbon::parse($annual->date)->format('d') }} 
                                             <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}.</span>
                                         </h3>
                                     </div>
                                     <div class="event__content">
                                         <h3 class="event-title mb-15" style="word-break: break-all">{{$event->titre}}</h3>
                                         <div class="event__content--meta mb-35">
-                                            <span><i class="fal fa-map"></i> {{$annual->lieu}} | {{$annual->ville}}</span>
-                                            <span> Durée : {{$annual->duree}} jour(s)</span>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$annual->lieu}}</span><div></div>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$annual->ville}}</span><div></div>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> Durée : {{$annual->duree}} jour(s)</span>
                                         </div>
                                         <a href="{{route('conference', $event->id)}}" class="theme_btn white_btn">View</a>
                                     </div>
