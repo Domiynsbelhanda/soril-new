@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Collective;
+use App\Models\ConseilAdmin;
+use App\Models\Consultatif;
 use App\Models\Individual;
+use App\Models\managementSecretariate;
 use Illuminate\Http\Request;
 
 class MembreController extends Controller
@@ -74,5 +77,29 @@ class MembreController extends Controller
         ]);
         return redirect ('membre')
             ->with('message', 'Adhésion effectuée avec succèss');
+    }
+
+    public function show_management_secretariat($id)
+    {
+        $user = managementSecretariate::all()->where('id', $id)->first();
+        return view('users.secretariat-details', [
+            'sec'=> $user
+        ]);
+    }
+    
+    public function show_admin($id)
+    {
+        $user = ConseilAdmin::all()->where('id', $id)->first();
+        return view('users.admin-details', [
+            'admin'=> $user
+        ]);
+    }
+
+    public function show_consultatif($id)
+    {
+        $user = Consultatif::all()->where('id', $id)->first();
+        return view('users.consultatif-details', [
+            'cons'=> $user
+        ]);
     }
 }

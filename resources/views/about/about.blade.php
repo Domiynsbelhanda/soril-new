@@ -262,7 +262,7 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$sec->type}}</span>
-                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a href="{{ route('secretariat_member', ['id'=>$sec->id]) }}">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
                             </div>
                         </div>
                     </div> 
@@ -291,7 +291,7 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$admin->position}}</span>
-                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a href="{{ route('admin_member', ['id'=>$admin->id]) }}">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
                             </div>
                         </div>
                     </div> 
@@ -320,7 +320,7 @@
                         </div>
                         <div class="counsilors__content">
                             <span class="mb-10">{{$cons->type}}</span>
-                            <h5 class="semi-title mb-20"><a href="team-details.html">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
+                            <h5 class="semi-title mb-20"><a href="{{ route('consultatif_member', ['id'=>$cons->id]) }}">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
                         </div>
                     </div>
                 </div> 
