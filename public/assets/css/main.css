@@ -5941,7 +5941,7 @@ input.main-search-input:-ms-input-placeholder {
 }
 .event__date h3 {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 30px;
   display: block;
   margin-bottom: 0;
   padding-top: 8px;
@@ -5952,7 +5952,7 @@ input.main-search-input:-ms-input-placeholder {
   transition: all 0.4s ease-out 0s;
 }
 .event__date h3 span {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   display: inherit;
   -webkit-transition: all 0.4s ease-out 0s;
@@ -5979,7 +5979,7 @@ input.main-search-input:-ms-input-placeholder {
 }
 .event__content .event-title {
   color: #00aa55;
-  font-size: 26px;
+  font-size: 22px;
   letter-spacing: -0.3px;
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;

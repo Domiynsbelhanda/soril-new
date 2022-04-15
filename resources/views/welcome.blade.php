@@ -100,10 +100,12 @@
                         <div class="col-xl-6 col-lg-6 col-md-6">
                             <div class="event mb-50" style="background-image: url(assets/img/events/events5.jpg);">
                                 <div class="event--front d-flex">
-                                    <div class="event__date mr-40">
+                                    <div class="event__date mr-10">
                                         <h3>
                                             {{ Carbon\Carbon::parse($annual->date)->format('d') }} 
-                                            <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}.</span>
+                                            <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}.
+                                                20{{ Carbon\Carbon::parse($annual->date)->format('y') }}
+                                            </span>
                                         </h3>
                                     </div>
                                     <div class="event__content">
