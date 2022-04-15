@@ -262,7 +262,7 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$sec->type}}</span>
-                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a href="{{ route('secretariat_member', ['id'=>$sec->id]) }}">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
                             </div>
                         </div>
                     </div> 
