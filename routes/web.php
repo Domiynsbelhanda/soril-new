@@ -46,6 +46,7 @@ Route::get('president-bio', [HomeController::class, 'bio'])->name('presidentbio'
 Route::get('bio', [HomeController::class, 'bio'])->name('bio'); // Use in soril
 
 Route::get('secretariat-details/{id}', [MembreController::class, 'show_management_secretariat'])->name('secretariat_member');
+Route::get('admin-details/{id}', [MembreController::class, 'show_admin'])->name('admin_member');
 
 /*
  * Library and publication

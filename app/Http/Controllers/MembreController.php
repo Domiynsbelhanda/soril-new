@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Collective;
+use App\Models\ConseilAdmin;
 use App\Models\Individual;
 use App\Models\managementSecretariate;
 use Illuminate\Http\Request;
@@ -82,6 +83,14 @@ class MembreController extends Controller
         $user = managementSecretariate::all()->where('id', $id)->first();
         return view('users.secretariat-details', [
             'sec'=> $user
+        ]);
+    }
+
+    public function show_admin($id)
+    {
+        $user = ConseilAdmin::all()->where('id', $id)->first();
+        return view('users.admin-details', [
+            'admin'=> $user
         ]);
     }
 }

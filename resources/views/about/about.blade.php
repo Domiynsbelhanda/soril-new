@@ -291,7 +291,7 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$admin->position}}</span>
-                                <h5 class="semi-title mb-20"><a href="team-details.html">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a href="{{ route('admin_member', ['id'=>$admin->id]) }}">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
                             </div>
                         </div>
                     </div> 
