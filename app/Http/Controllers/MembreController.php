@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Collective;
 use App\Models\ConseilAdmin;
+use App\Models\Consultatif;
 use App\Models\Individual;
 use App\Models\managementSecretariate;
 use Illuminate\Http\Request;
@@ -85,12 +86,20 @@ class MembreController extends Controller
             'sec'=> $user
         ]);
     }
-
+    
     public function show_admin($id)
     {
         $user = ConseilAdmin::all()->where('id', $id)->first();
         return view('users.admin-details', [
             'admin'=> $user
+        ]);
+    }
+
+    public function show_consultatif($id)
+    {
+        $user = Consultatif::all()->where('id', $id)->first();
+        return view('users.consultatif-details', [
+            'cons'=> $user
         ]);
     }
 }

@@ -320,7 +320,7 @@
                         </div>
                         <div class="counsilors__content">
                             <span class="mb-10">{{$cons->type}}</span>
-                            <h5 class="semi-title mb-20"><a href="team-details.html">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
+                            <h5 class="semi-title mb-20"><a href="{{ route('consultatif_member', ['id'=>$cons->id]) }}">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
                         </div>
                     </div>
                 </div> 
