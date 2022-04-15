@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <section class="page-title-area" style="background: linear-gradient(#03072e98, #03072eb9), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+    {{-- <section class="page-title-area" style="background: linear-gradient(#03072e98, #03072eb9), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
         <div class="container" >
             <div class="row">
                 <div class="col-xl-4 offset-xl-4">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section>
         @if(session('message'))
         <div class="row">

@@ -8,7 +8,7 @@
     @php
         $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
     @endphp
-    <section class="page-title-area" style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+    {{-- <section class="page-title-area" style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
         <div class="container" >
             <div class="row">
                 <div class="col-xl-6 offset-xl-3">
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     
     <section class="events-list-area pt-40 pb-10">
         <div class="container">
