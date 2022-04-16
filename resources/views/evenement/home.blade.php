@@ -64,7 +64,7 @@
                             </div>
                         </div>
                         @forelse ($events as $event)
-                            <div class="col-xl-12 col-lg-12 col-md-12">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="event mb-50" style="background-image: url(assets/img/events/events5.jpg);">
                                     <div class="event--front d-flex">
                                         <div class="event__date mr-40">
