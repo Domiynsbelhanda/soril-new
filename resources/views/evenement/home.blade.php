@@ -35,7 +35,7 @@
                                 <div class="event--front d-flex">
                                     <div class="event__date mr-40">
                                         <h3>{{ Carbon\Carbon::parse($annual->date)->format('d') }} 
-                                            <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}.</span>
+                                            <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}. 20{{ Carbon\Carbon::parse($annual->date)->format('y') }}</span>
                                         </h3>
                                     </div>
                                     <div class="event__content">
@@ -77,8 +77,9 @@
                                         <div class="event__content">
                                             <h3 class="event-title mb-15">{{$event->titre}}</h3>
                                             <div class="event__content--meta mb-35">
-                                                <span><i class="fal fa-map"></i> {{$event->lieu}} | {{$event->ville}}</span>
-                                                <span> Durée : {{$event->duree}} jour(s)</span>
+                                                <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$event->lieu}}</span><div></div>
+                                                <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$event->ville}}</span><div></div>
+                                                <span><i class="fal fa-circle" style="font-size: 9px"></i> Durée : {{$event->duree}} jour(s)</span>
                                             </div>
                                             <a href="{{route('conference', $event->id)}}" class="theme_btn white_btn">View</a>
                                         </div>
