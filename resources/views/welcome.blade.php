@@ -111,9 +111,9 @@
                                     <div class="event__content">
                                         <h3 class="event-title mb-15" style="word-break: break-all">{{$event->titre}}</h3>
                                         <div class="event__content--meta mb-35">
-                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$annual->lieu}}</span><div></div>
-                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$annual->ville}}</span><div></div>
-                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> Durée : {{$annual->duree}} jour(s)</span>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$event->lieu}}</span><div></div>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> {{$event->ville}}</span><div></div>
+                                            <span><i class="fal fa-circle" style="font-size: 9px"></i> Durée : {{$event->duree}} jour(s)</span>
                                         </div>
                                         <a href="{{route('conference', $event->id)}}" class="theme_btn white_btn">View</a>
                                     </div>
