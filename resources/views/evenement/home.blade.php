@@ -69,7 +69,8 @@
                                     <div class="event--front d-flex">
                                         <div class="event__date mr-40">
                                             <h3>{{ Carbon\Carbon::parse($annual->date)->format('d') }} 
-                                                <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}.</span>
+                                                <span>{{ Str::substr(Carbon\Carbon::parse($annual->date)->format('F'), 0, 3) }}. 
+                                                    20{{ Carbon\Carbon::parse($annual->date)->format('y') }}</span>
                                             </h3>
                                         </div>
                                         <div class="event__content">
