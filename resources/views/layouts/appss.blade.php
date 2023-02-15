@@ -71,6 +71,9 @@
                                         </ul>
                                     </li>
                                     <li>
+                                        <a href="{{url('https://www.education.soril.org')}}">Educations</a>
+                                    </li>
+                                    <li>
                                         <a href="{{route('certification')}}">Certifications</a>
                                     </li>
                                     <li>
@@ -168,7 +171,7 @@
                     <div class="footer__widget footer__widget__02 mb-30">
                         <div class="row">
                             <div class="col-xl-4 col-lg-5 col-md-6 col-4">
-                                
+
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-6 col-8">
                                  <h6 class="fot-title mb-30">Useful Links</h6>
@@ -230,7 +233,7 @@
                                 </div>
                             </div>
                         @empty
-                            
+
                         @endforelse
                     </div>
                 </div>
@@ -242,7 +245,7 @@
                     <div class="col-xl-5 col-lg-4 col-md-8">
                         <div class="fot-nav">
                             <ul class="fot-nav-list">
-                               
+
                             </ul>
                         </div>
                     </div>
