@@ -22,7 +22,7 @@
             </div>
         </div>
     </section> --}}
-   
+
     <!-- -------- END HEADER 7 w/ text and video ------- -->
 
     <section class="py-2">
@@ -51,66 +51,88 @@
             </div>
 
             <div class="row">
-                <div class="card text-center">
-                    <div class="form-group">
-                        <script>
-                            function myFunction(value){
-                                var url = 'https://soril.org/public/offresEmploi';
-                                if (url.indexOf('?') > -1){
-                                    url = urls + '?pays' +value
-                                }else{
-                                    url += '?pays='+value
+                <div class="col-md-2 mt-5">
+                    <div class="card text-center">
+                        <div class="form-group">
+                            <script>
+                                function myFunction(value){
+                                    var url = 'https://soril.org/public/offresEmploi';
+                                    if (url.indexOf('?') > -1){
+                                        url = urls + '?pays' +value
+                                    }else{
+                                        url += '?pays='+value
+                                    }
+                                    window.location.href = url;
                                 }
-                                window.location.href = url;
-                            }
-                        </script>
-                        <h4 for="exampleFormControlSelect1">Filter Country</h4>
-                        <select class="form-control-lg text-center" name="type" onchange="myFunction(this.value)">
-                            @if(request()->pays == "all" || request()->pays == "")
-                                <option selected value="all">All</option>
-                                <option value="CD">Congo Democratic Republic</option>
-                                <option value="ZM">Zambia</option>
-                                <option value="TZ">Tanzania</option>
-                                <option value="UG">Uganda</option>
-                                <option value="BI">Burundi</option>
-                            @elseif(request()->pays == "CD")
-                                <option value="all">All</option>
-                                <option selected value="CD">Congo Democratic Republic</option>
-                                <option value="ZM">Zambia</option>
-                                <option value="TZ">Tanzania</option>
-                                <option value="UG">Uganda</option>
-                                <option value="BI">Burundi</option>
-                            @elseif(request()->pays == "ZM")
-                                <option value="all">All</option>
-                                <option value="CD">Congo Democratic Republic</option>
-                                <option selected value="ZM">Zambia</option>
-                                <option value="TZ">Tanzania</option>
-                                <option value="UG">Uganda</option>
-                                <option value="BI">Burundi</option>
-                            @elseif(request()->pays == "TZ")
-                                <option value="all">All</option>
-                                <option value="CD">Congo Democratic Republic</option>
-                                <option value="ZM">Zambia</option>
-                                <option selected value="TZ">Tanzania</option>
-                                <option value="UG">Uganda</option>
-                                <option value="BI">Burundi</option>
-                            @elseif(request()->pays == "UG")
-                                <option value="all">All</option>
-                                <option value="CD">Congo Democratic Republic</option>
-                                <option value="ZM">Zambia</option>
-                                <option value="TZ">Tanzania</option>
-                                <option selected value="UG">Uganda</option>
-                                <option value="BI">Burundi</option>
-                            @elseif(request()->pays == "BI")
-                                <option value="all">All</option>
-                                <option value="CD">Congo Democratic Republic</option>
-                                <option value="ZM">Zambia</option>
-                                <option value="TZ">Tanzania</option>
-                                <option value="UG">Uganda</option>
-                                <option selected value="BI">Burundi</option>
-                            @endif
-                        </select>
+                            </script>
+                            <select class="form-control-lg text-center" name="type" onchange="myFunction(this.value)">
+                                @if(request()->pays == "all" || request()->pays == "")
+                                    <option selected value="all">Filter by Country (All)</option>
+                                    <option value="CD">Congo Democratic Republic</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="BI">Burundi</option>
+                                @elseif(request()->pays == "CD")
+                                    <option value="all">Filter by Country (All)</option>
+                                    <option selected value="CD">Congo Democratic Republic</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="BI">Burundi</option>
+                                @elseif(request()->pays == "ZM")
+                                    <option value="all">Filter by Country (All)</option>
+                                    <option value="CD">Congo Democratic Republic</option>
+                                    <option selected value="ZM">Zambia</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="BI">Burundi</option>
+                                @elseif(request()->pays == "TZ")
+                                    <option value="all">Filter by Country (All)</option>
+                                    <option value="CD">Congo Democratic Republic</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option selected value="TZ">Tanzania</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="BI">Burundi</option>
+                                @elseif(request()->pays == "UG")
+                                    <option value="all">Filter by Country (All)</option>
+                                    <option value="CD">Congo Democratic Republic</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option selected value="UG">Uganda</option>
+                                    <option value="BI">Burundi</option>
+                                @elseif(request()->pays == "BI")
+                                    <option value="all">Filter by Country (All)</option>
+                                    <option value="CD">Congo Democratic Republic</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="TZ">Tanzania</option>
+                                    <option value="UG">Uganda</option>
+                                    <option selected value="BI">Burundi</option>
+                                @endif
+                            </select>
+                        </div>
                     </div>
+                </div>
+
+                <div class="col-md-3 mt-5">
+                    <script>
+                        function myFunction(value) {
+                            var url = 'https://soril.org/public/offresEmploi';
+                            if (url.indexOf('?') > -1) {
+                                url = urls + '?secteur' + value
+                            } else {
+                                url += '?secteur=' + value
+                            }
+                            window.location.href = url;
+                        }
+                    </script>
+                    <select class="form-control-lg text-center" name="type" onchange="myFunction(this.value)">
+                        <option>Choisir un domaine</option>
+                        <option value="all">Toute les secteurs</option>
+                        <option value="Assurances"> Assurances </option>
+                        <option value="Management"> Risk Management </option>
+                        <option value="Complience"> Complience </option>
+                    </select>
                 </div>
             </div>
 
