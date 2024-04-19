@@ -26,6 +26,22 @@ class About extends Controller
         ]);
     }
 
+
+    public function profile($id, $section): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        $user = null;
+        if($section=='management'){
+            $user = managementSecretariate::where('id', $id)->first();
+        } else if($section == 'consultatif'){
+            Consultatif::where('id', $id)->first();
+        }
+        else {
+            $user = ConseilAdmin::where('id', $id)->first();
+        }
+
+        return view('about.profile', compact('user'));
+    }
+
     public function partenaire(){
         return view('about.register');
     }

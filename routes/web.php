@@ -42,6 +42,10 @@ Route::get('/', function (){
 });
 
 Route::get('home', [HomeController::class, 'home'])->name('home'); // Use in soril
+
+Route::get('message', [HomeController::class, 'message'])->name('message');
+
+
 Route::get('president-bio', [HomeController::class, 'bio'])->name('presidentbio'); // Use in soril
 Route::get('bio', [HomeController::class, 'bio'])->name('bio'); // Use in soril
 
@@ -73,6 +77,7 @@ Route::post('candidat', [HomeController::class, 'addCandidate'])->name('candidat
  */
 
 Route::get('about', [About::class, 'home'])->name('about');
+Route::get('about/profile/{id}/{section}', [About::class, 'profile'])->name('about.profile');
 Route::get('register-partenaire', [About::class, 'partenaire'])->name('partenariat');
 Route::post('send-register', [About::class, 'send'])->name('send-register');
 

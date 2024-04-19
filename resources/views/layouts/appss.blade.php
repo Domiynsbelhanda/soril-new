@@ -76,7 +76,7 @@
                                     <li>
                                         <a href="{{route('certification')}}">Certifications</a>
                                     </li>
-                                    <li><a href="#">Publications <i class="far fa-chevron-down"></i></a>
+                                    <li><a href="#">Resources <i class="far fa-chevron-down"></i></a>
                                         <ul class="submenu">
                                             <li><a href="{{route('journal.index')}}">Journal</a></li>
                                             <li><a href="{{route('library')}}">Library</a></li>
@@ -144,7 +144,7 @@
                     <a href="{{route('certification')}}">Certifications</a>
                 </li>
 
-                <li><a href="#">Publications <i class="far fa-chevron-down"></i></a>
+                <li><a href="#">Resources <i class="far fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li><a href="{{route('journal.index')}}">Journal</a></li>
                         <li><a href="{{route('library')}}">Library</a></li>

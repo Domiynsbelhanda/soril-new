@@ -39,6 +39,16 @@ class HomeController extends Controller
         ]);
     }
 
+    public function message(Request $request){
+
+        $messages = MessagePresident::where('id', $request->id)->get()->first();
+
+        return view('message', [
+                'message' => $messages
+            ]
+        );
+    }
+
     public function bio(Request $request)
     {
         return view("team-details");
