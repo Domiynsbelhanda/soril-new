@@ -46,7 +46,7 @@
                                                 <br>
                                                 <div class="author-info">
                                                     <div class="author-avatar">
-                                                        <img src="{{asset('images/mimile.png')}}"
+                                                        <img src="{{asset('assets/img/mimile.png')}}"
                                                              style="height: 100px!important; width: 100px!important; object-fit: cover!important;"
                                                              alt="">
                                                     </div>
