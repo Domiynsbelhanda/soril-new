@@ -89,7 +89,7 @@
 <section class="portfolio-area pt-110 pb-30" id="corner">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="container">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     @forelse ($events as $event)
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="event mb-50" style="background-image: url(assets/img/events/events5.jpg);">
                                 <div class="event--front d-flex">
                                     <div class="event__date mr-10">
@@ -125,146 +125,70 @@
                     @endforelse
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="row align-items-center">
-                    <div class="col-xl-3 col-lg-3 col-md-12">
-                        <div class="portfolio portfolio-02">
-                            <div class="portfolio-02__img">
-                                <img class="img-fluid" style="max-width: 150px" src="{{asset('assets/img/mimile.png')}}" alt="Mimile Mukuna">
-                            </div>
-                        </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-area pt-110">
+    <div class="container" bis_skin_checked="1">
+        <div class="row no-gutters align-items-center" bis_skin_checked="1">
+            <div class="col-xl-2 col-lg-6 col-md-12">
+
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12" bis_skin_checked="1">
+                <div class="portfolio portfolio-02" bis_skin_checked="1">
+                    <div class="portfolio-02__img" bis_skin_checked="1">
+                        <img class="img-fluid" style="width: 100%!important;" src="{{asset('assets/img/mimile.png')}}" alt="">
                     </div>
-                    <div class="col-xl-9 col-lg-9 col-md-12 pl-4">
-                        <div class="portfolio-wrapper-02">
-                            <div class="portfolio">
-                                <div class="section-title mb-15">
+{{--                    <div class="portfolio-02__toltip white-bg d-none d-md-block" bis_skin_checked="1">--}}
+{{--                        <div class="quote-right text-right mb-20 pr-35" bis_skin_checked="1">--}}
+{{--                            <span><i class="fal fa-quote-left"></i></span>--}}
+{{--                        </div>--}}
+{{--                        <h6 class="toltip-title-02 mb-20">"If you change your city, you're--}}
+{{--                            changing the world,"</h6>--}}
+{{--                        <p><span>---</span> Christina J. Walsh</p>--}}
+{{--                    </div>--}}
+                </div>
+            </div>
 
-                                    <h6 class="left_line pl-55">The President's Corner</h6>
-                                    <h2>
-                                        <a href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}">
-                                            <h4>Mimile MAISHA MUKUNA</h4>
-                                        </a>
-                                    </h2>
-                                </div>
-                                <div class="portfolio__content">
-                                    <div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="services-left-area pb-100">
-                                                    <div class="services-wrap-content">
-                                                        <div class="services-wrap-content__text">
-                                                            <div class="row mt-15 mb-20">
-                                                                @forelse (\App\Models\MessagePresident::all()->slice(0, 1) as $item)
-                                                                    <div class="col-12">
-                                                                        <div class="features-03 d-flex align-items-center mb-3 px-3">
-                                                                            <div class="feature-03__content">
-                                                                                <h5>{{$item->titreMessage}}</h5>
-                                                                                <p>{{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}</p>
-                                                                                <p>
-                                                                                    {{$item->introduction}}
-                                                                                </p>
-                                                                                <a class="btn btn-primary" href="{{route('message', ['id'=>$item->id])}}">
-                                                                                    Read full message
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="modal fade" id="messageModal-{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h5 class="modal-title" id="staticBackdropLabel">{{$item->titreMessage}}</h5>
-                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                        <span aria-hidden="true">&times;</span>
-                                                                                    </button>
+            <div class="col-xl-1 col-lg-6 col-md-12">
 
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div>
-                                                                                        <h6 class="mb-0">{{$item->introduction}}</h6>
-                                                                                    </div>
-                                                                                    <br>
-                                                                                    <em>{{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}</em>
-                                                                                    <br>
-                                                                                    <br>
-
-                                                                                    <p class="text-sm mb-0">
-                                                                                        {!!$item->message!!}
-                                                                                    </p>
-                                                                                    <br>
-                                                                                    <br>
-
-                                                                                    <p>
-                                                                                        {!!$item->about!!}
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                @empty
-
-                                                                @endforelse
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-{{--                                        <p class="mb-35">--}}
-{{--                                            <a href="{{ route("presidentbio") }}"  class="btn btn-link">--}}
-{{--                                                Bio--}}
-{{--                                            </a>--}}
-{{--                                        <div class="modal fade" id="bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
-{{--                                            <div class="modal-dialog">--}}
-{{--                                                <div class="modal-content">--}}
-{{--                                                    <div class="modal-header">--}}
-{{--                                                        <h5 class="modal-title" id="exampleModalLabel">Mimile Mukuna Maisha</h5>--}}
-{{--                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
-{{--                                                            <span aria-hidden="true">&times;</span>--}}
-{{--                                                        </button>--}}
-{{--                                                    </div>--}}
-{{--                                                    <div class="modal-body">--}}
-{{--                                                        <p class="mb-30">--}}
-{{--                                                            Mimile is an expert in International Business Law and International--}}
-{{--                                                            Business Risk Management.--}}
-{{--                                                            Since 2013, he has been CEO of First Continental--}}
-{{--                                                            Legal and Risk Consulting where he advises on International--}}
-{{--                                                            Business Law, International Business Risk Management and on--}}
-{{--                                                            international financing transactions.--}}
-{{--                                                        </p>--}}
-
-{{--                                                        <p class="mb-30">--}}
-{{--                                                            His expertise has been sought by transnational companies, governments--}}
-{{--                                                            and professional bodies. He previously spent 20 years in the--}}
-{{--                                                            insurance/risk finance industry where he occupied executive--}}
-{{--                                                            positions in various companies in different African countries.--}}
-{{--                                                        </p>--}}
-
-{{--                                                        <p class="mb-30">--}}
-{{--                                                            He is a regular speaker at conferences and seminars on International--}}
-{{--                                                            Business Risk Management and international investment/trade law--}}
-{{--                                                            topics and has made it his mission to promote the principle and--}}
-{{--                                                            practice of risk leadership in the business world. he is the author--}}
-{{--                                                            of the book titled "Why Risk so Much For so Little published in 2011.--}}
-{{--                                                        </p>--}}
-{{--                                                    </div>--}}
-{{--                                                    <div class="modal-footer">--}}
-{{--                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        </p>--}}
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-12" bis_skin_checked="1">
+                <div class="portfolio-wrapper-02" bis_skin_checked="1">
+                    <div class="portfolio" bis_skin_checked="1">
+                        <div class="section-title mb-15" bis_skin_checked="1">
+                            <h6 class="left_line pl-55">The President's Corner</h6>
+                            <h3>
+                                <a href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}">
+                                    Mimile MAISHA MUKUNA
+                                </a>
+                            </h3>
                         </div>
+
+                        @forelse (\App\Models\MessagePresident::all()->slice(0, 1) as $item)
+
+                            <div class="portfolio__content" bis_skin_checked="1">
+                                <h4>
+                                    {{$item->titreMessage}}
+                                </h4>
+
+                                <p>
+                                    {{ Carbon\Carbon::parse($item->date)->format('F, d Y') }}
+                                </p>
+
+                                <p class="mb-35">
+                                    {{$item->introduction}}
+                                </p>
+                                <a class="theme_btn" href="{{route('message', ['id'=>$item->id])}}">
+                                    Read full message
+                                    <i class="far fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+
+                        @empty
+
+                        @endforelse
                     </div>
                 </div>
             </div>

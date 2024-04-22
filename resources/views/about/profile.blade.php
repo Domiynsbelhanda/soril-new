@@ -6,75 +6,35 @@
 
 @section('content')
 
-    <!-- Page Title Section Start -->
-    <div class="page-title-section section section-padding-top-0" data-bg-color="#f5f5f5">
-        <div class="page-breadcrumb position-static">
-            <div class="container">
-                <ul class="breadcrumb">
-                    <li><a href="{{route('home')}}">Accueil</a></li>
-                    <li><a href="{{route('about')}}">A Propos</a></li>
-                    <li class="current">{{$user->prenom . ' ' . $user->nom}}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Page Title Section End -->
-
-
-    <!-- Profile Section Start  -->
-    <div class="profile-section section section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-md-6">
-                    <div class="profile-image">
-                        <img
-                            style="height: 430px!important; width: 350px!important; object-fit: cover!important;"
-                            src="{{asset($user->image)}}"
-                             alt="profile">
+    <section class="team-portfolio pt-40 pb-40 mt-40 mb-80">
+        <div class="container" bis_skin_checked="1">
+            <div class="row align-items-center" bis_skin_checked="1">
+                <div class="col-xl-5 col-lg-5 col-md-5" bis_skin_checked="1">
+                    <div class="mayor__img mb-30" bis_skin_checked="1">
+                        <img src="{{asset($user->image)}}" alt="">
                     </div>
                 </div>
-                <div class="col-xl-6 col-md-6 offset-xl-1">
-                    <div class="profile-info">
-                        <h3 class="profile-name">
-                            {{$user->prenom . ' ' . $user->nom}}
-                        </h3>
-                        <div class="author-career">/{{$user->type}}</div>
-                        <p class="author-bio">
-                            {{$user->about}}
-                        </p>
-
-                        <h5 class="profile-contact-title">Contact</h5>
-                        <span class="contact-info-text">
-                                <span class="phone">Phone number: <strong>{{$user->phone}}</strong> </span>
-                            <br>
-                            <span class="email">Email: <strong>{{$user->email}}</strong></span>
-                            </span>
-                        <ul class="author-social-networks">
-                            <li class="item">
-                                <a href="JavaScript:Void(0);" target="_blank" class="social-link"> <i
-                                        class="fab fa-twitter social-link-icon"></i> </a>
-                            </li>
-                            <li class="item">
-                                <a href="JavaScript:Void(0);" target="_blank" class="social-link"> <i
-                                        class="fab fa-facebook-f social-link-icon"></i> </a>
-                            </li>
-                            <li class="item">
-                                <a href="JavaScript:Void(0);" target="_blank" class="social-link"> <i
-                                        class="fab fa-instagram social-link-icon"></i> </a>
-                            </li>
-                            <li class="item">
-                                <a href="JavaScript:Void(0);" target="_blank" class="social-link"> <i
-                                        class="fab fa-pinterest social-link-icon"></i> </a>
-                            </li>
-                            <li class="item">
-                                <a href="JavaScript:Void(0);" target="_blank" class="social-link"> <i
-                                        class="fab fa-youtube social-link-icon"></i> </a>
-                            </li>
-                        </ul>
+                <div class="col-xl-6 col-lg-7 col-md-7" bis_skin_checked="1">
+                    <div class="portfolis__wrapper" bis_skin_checked="1">
+                        <div class="portfolis pos-rel pl-40" bis_skin_checked="1">
+                            <div class="section-title mb-35" bis_skin_checked="1">
+                                <h6 class="left_line pl-55">{{$user->type}}</h6>
+                                <h2>
+                                    {{$user->prenom . ' ' . $user->nom}}
+                                </h2>
+                                <span>
+                                    {{$user->about}}
+                                </span>
+                            </div>
+                            <ul class="portfolis__contact">
+                                <li><a href="#"><i class="fal fa-envelope"></i> {{$user->email}}</a></li>
+                                <li><a href="#"><i class="fal fa-phone"></i> {{$user->phone}}</a></li>
+{{--                                <li><a href="#"><i class="fal fa-map-marker-alt"></i> 13/A, Miranda Halim City Hall, New York, US</a></li>--}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Profile Section End  -->
+    </section>
 @endsection
