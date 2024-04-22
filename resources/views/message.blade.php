@@ -12,14 +12,6 @@
                 <h1 class="title">Message N° {{$message->id}}</h1>
             </div>
         </div>
-        <div class="page-breadcrumb">
-            <div class="container">
-                <ul class="breadcrumb">
-                    <li><a href="{{route('home')}}">Accueil</a></li>
-                    <li class="current">Message</li>
-                </ul>
-            </div>
-        </div>
     </div>
     <!-- Page Title Section End -->
 
