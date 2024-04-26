@@ -5,6 +5,100 @@
 @endsection
 
 @section('content')
+
+    <section class="news-area-02 pt-40 pb-100">
+        <div class="container" bis_skin_checked="1">
+            <div class="row" bis_skin_checked="1">
+                <div class="col-xl-8 col-lg-8 col-md-12" bis_skin_checked="1">
+                    <div class="left-news-area left-news-02" bis_skin_checked="1">
+                        <div class="blog blogs mb-40" bis_skin_checked="1">
+                            <div class="blog__content" bis_skin_checked="1">
+                                <span class="tag mb-25">Cityhall</span>
+                                <h3 class="blog-title mb-15">
+                                    <a>
+                                        {{$message->titreMessage}}
+                                    </a>
+                                </h3>
+                                <div class="blog__content--meta mb-20" bis_skin_checked="1">
+                                    <span><i class="far fa-calendar-alt"></i> {{\Carbon\Carbon::parse($message->date)->format('d/m/Y')}}</span>
+                                </div>
+                                <p class="mb-15">
+                                    {{$message->introduction}}
+                                </p>
+
+                                <blockquote class="block-quote">
+                                    <p>
+                                        {{$message->about}}
+                                    </p>
+                                </blockquote>
+
+                                <p class="40">
+                                    {!! $message->message !!}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12" bis_skin_checked="1">
+                    <div class="right-news-area" bis_skin_checked="1">
+                        <div class="widget mb-40" bis_skin_checked="1">
+                            <div class="widget-title-box mb-30" bis_skin_checked="1">
+                                <span class="animate-border"></span>
+                                <h6 class="widget-title">Author</h6>
+                            </div>
+                            <div class="about-me text-center" bis_skin_checked="1">
+                                <a href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}">
+                                    <div class="about-me-img mb-30" bis_skin_checked="1">
+                                        <img src="{{asset('assets/img/mimile.png')}}"
+                                             style="height: 100px!important; width: 100px!important; object-fit: cover!important;"
+                                             alt="">
+                                    </div>
+                                    <h6 class="mb-15">
+                                        {{$message->prenom . ' ' . $message->nom}}
+                                    </h6>
+                                    <p class="mb-25">
+                                        {{$message->titreAuteur}}
+                                    </p>
+                                </a>
+
+                                <div class="widget-social-icon" bis_skin_checked="1">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-behance"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-google"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="widget mb-40" bis_skin_checked="1">
+                            <div class="widget-title-box mb-30" bis_skin_checked="1">
+                                <span class="animate-border"></span>
+                                <h6 class="widget-title">Messages Précédents</h6>
+                            </div>
+                            <ul class="recent-post">
+                                <li>
+                                    <div class="post d-flex align-items-center mb-30" bis_skin_checked="1">
+                                        <div class="post__thumb mr-20" bis_skin_checked="1">
+                                            <img src="assets/img/news/post4.png" alt="">
+                                        </div>
+                                        <div class="post__content" bis_skin_checked="1">
+                                            <h6 class="post-title" style="color: #00aa55!important;"><a href="#">Lorem ipsum dolor sit
+                                                    cing elit, sed do.</a></h6>
+                                            <span style="color: black!important;"><i class="fal fa-calendar-alt"></i> 24th March 2019</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Page Title Section Start -->
     <div class="page-title-section section">
         <div class="page-title">
@@ -28,36 +122,34 @@
                         <div class="blog-3 blog-details col" data-aos="fade-up">
                             <div class="info">
                                 <h3 class="title">
-                                    {{$message->titreMessage}}
+
                                 </h3>
                                 <ul class="meta">
                                     <li>
                                         <i class="fas fa-calendar"></i>
-                                        {{\Carbon\Carbon::parse($message->date)->format('d/m/Y')}}
+
                                     </li>
 
                                     <li>
                                         <div class="entry-author">
                                             <a
-                                                href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}"
-{{--                                                id="openModalPresident" onclick="openModal()"--}}
+                                                href=""
+                                                {{--                                                id="openModalPresident" onclick="openModal()"--}}
                                             >
                                                 <br>
                                                 <br>
                                                 <div class="author-info">
                                                     <div class="author-avatar">
-                                                        <img src="{{asset('assets/img/mimile.png')}}"
-                                                             style="height: 100px!important; width: 100px!important; object-fit: cover!important;"
-                                                             alt="">
+
                                                     </div>
                                                     <div class="author-description">
                                                         <br>
                                                         <h6 class="author-name" style="margin-bottom: 0!important;">
-                                                            {{$message->prenom . ' ' . $message->nom}}
+
                                                         </h6>
 
                                                         <div class="author-biographical-info">
-                                                            {{$message->titreAuteur}}
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -67,17 +159,13 @@
                                 </ul>
                                 <div class="desc">
                                     <p>
-                                        {{$message->introduction}}
+
                                     </p>
 
-                                    <blockquote class="block-quote">
-                                        <p>
-                                            {{$message->about}}
-                                        </p>
-                                    </blockquote>
+
 
                                     <p>
-                                        {!! $message->message !!}
+
                                     </p>
                                 </div>
 

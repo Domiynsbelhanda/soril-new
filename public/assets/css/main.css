@@ -4781,7 +4781,7 @@ input.main-search-input:-ms-input-placeholder {
   font-weight: 700;
   border-bottom: 1px solid #ededed;
   display: block;
-  
+
 }
 
 .widget-list li a {
@@ -6678,7 +6678,7 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 .widget-title {
-  
+
   font-size: 20px;
   position: relative;
   display: inline-block;
@@ -6779,7 +6779,7 @@ input.main-search-input:-ms-input-placeholder {
   font-weight: 500;
 }
 .recent-post .post:hover .post-title {
-  color: #00aa55;
+  color: #000000;
 }
 
 .catagories li {
