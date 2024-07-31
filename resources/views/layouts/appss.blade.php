@@ -57,32 +57,50 @@
                                     <li>
                                         <a href="{{route('home')}}">Home</a>
                                     </li>
+
+
                                     <li>
                                         <a href="{{route('about')}}">About Us</a>
                                     </li>
+
+
+                                    <li>
+                                        <a href="{{route('certification')}}">The Framework</a>
+                                    </li>
+
+                                    <li><a href="{{route('journal.index')}}">The Journal</a></li>
+
+                                    <li>
+                                        <a href="{{route('certification')}}">Training</a>
+                                    </li>
+
                                     <li>
                                         <a href="{{route('evenementss')}}">Events</a>
                                     </li>
-                                    <li><a href="#">Membership <i class="far fa-chevron-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="{{route('individual')}}">Individual Membership</a></li>
-                                            <li><a href="{{route('collective')}}">Corporate Membership</a></li>
-                                            <li><a href="{{route('membre')}}">Member Associations</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="{{url('https://www.education.soril.org')}}">Educations</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('certification')}}">Certifications</a>
-                                    </li>
-                                    <li><a href="#">Resources <i class="far fa-chevron-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="{{route('journal.index')}}">Journal</a></li>
-                                            <li><a href="{{route('library')}}">Library</a></li>
-                                            <li><a href="{{route('emplois')}}">Job offers</a></li>
-                                        </ul>
-                                    </li>
+
+                                    <li><a href="{{route('library')}}">Library</a></li>
+
+
+{{--                                    <li><a href="#">Membership <i class="far fa-chevron-down"></i></a>--}}
+{{--                                        <ul class="submenu">--}}
+{{--                                            <li><a href="{{route('individual')}}">Individual Membership</a></li>--}}
+{{--                                            <li><a href="{{route('collective')}}">Corporate Membership</a></li>--}}
+{{--                                            <li><a href="{{route('membre')}}">Member Associations</a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="{{url('https://www.education.soril.org')}}">Educations</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="{{route('certification')}}">Certifications</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li><a href="#">Resources <i class="far fa-chevron-down"></i></a>--}}
+{{--                                        <ul class="submenu">--}}
+
+{{--                                            --}}
+{{--                                            <li><a href="{{route('emplois')}}">Job offers</a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </li>--}}
                                 </ul>
                             </nav>
                         </div>

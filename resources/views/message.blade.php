@@ -13,7 +13,6 @@
                     <div class="left-news-area left-news-02" bis_skin_checked="1">
                         <div class="blog blogs mb-40" bis_skin_checked="1">
                             <div class="blog__content" bis_skin_checked="1">
-                                <span class="tag mb-25">Cityhall</span>
                                 <h3 class="blog-title mb-15">
                                     <a>
                                         {{$message->titreMessage}}
