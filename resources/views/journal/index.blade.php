@@ -8,12 +8,14 @@
     @php
         $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
     @endphp
-    <section class="page-title-area" style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
-        <div class="container" >
+    <section class="page-title-area"
+             style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-4 offset-xl-4">
                     <div class="page-title text-center">
-                        <img class="card-img-top" src="{{ asset("assets/img/logo/journal.png") }}" style="width: 90%; height: auto; margin: 20px auto;" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset("assets/img/logo/journal.png") }}"
+                             style="width: 90%; height: auto; margin: 20px auto;" alt="Card image cap">
                     </div>
                 </div>
             </div>
@@ -74,7 +76,7 @@
                                     <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
                                 </li>
                             </ul>
-                            
+
                         </div>
                         <div class="widget add-img-here mb-40">
                             <img src="assets/img/service/08.jpg" alt="">
@@ -88,40 +90,30 @@
                                 <h4>The Journal Overview</h4>
                             </div>
                             <div class="services-wrap-content__text">
-                                <p class="mb-20">The African Journal of Risk Leadership (AJRL) is published 
-                                    quarterly online only on behalf of on behalf of the African Risk 
-                                    Management Society. <br><br>
+                                <p class="mb-20">
+                                    The International Journal of Risk Leadership (IJRL) is published quarterly online
+                                    risk leadership related original and review papers, studies, educational articles,
+                                    conference reports, management reports, book reviews, news, and notes commentaries.
+                                    <br>
+                                    <br>
+                                    The mission of the IRJL is to create, stimulate and perpetuate a culture of
+                                    knowledge and experience sharing amongst business leaders, researchers and any
+                                    qualified interested of risk leadership in ways that will contribute to the
+                                    availability of risk leadership related information, and, overall, to the purpose of
+                                    SoRiL.
 
-                                    The mission of the ARJL is to create, stimulate and perpetuate a 
-                                    culture of information sharing and publishing amongst researchers 
-                                    and practitioners of risk management in African in ways that will 
-                                    contribute to availability of Africa related risk and risk management 
-                                    information, better understanding of Africa risk and risk management 
-                                    particularities and, overall, to the purpose of ARiMaS. The Scope <br><br>
-                                    The AJRM publishes risk management related original and review papers, 
-                                    studies, technical reports, educational articles, conference reports, 
-                                    management reports, book reviews, news and notes commentaries on business, 
-                                    organisational, social, political, and economic risks and risk management 
-                                    issues and new developments in the field of risk management.</p>
-                            </div>
-                        </div>
-                        <div class="services-wrap-content__text">
-                            <div class="services-wrap-content__title mb-15">
-                                <h5>Target Audience</h5>
-                                <p>
-                                    The AJRM is intended for African practitioners, researchers, and scholars 
-                                    involved with or interested in Africa risk management issues and adjacent fields.
                                 </p>
                             </div>
                         </div>
+
                         <div class="services-wrap-content__text">
                             <div class="services-wrap-content__title mb-15">
                                 <h5>Submissions</h5>
                                 <p>
-                                    Submissions may be voluntary, by invitation, and suggestions for special 
-                                    issues and publications are welcome. We are particularly interested in 
-                                    receiving articles and comments reflecting the point of view and experience 
-                                    of practitioners working in Africa.
+                                    Submissions for publications may be voluntary or by invitation, and suggestions for
+                                    special issues are welcome. We are particularly interested in receiving submissions
+                                    from business leaders about their reflexions on their experience and insights on
+                                    risk leadership.
                                 </p>
                             </div>
                         </div>
@@ -129,76 +121,24 @@
                             <div class="col-12">
                                 <div class="services-details-list mb-10">
                                     <h4 class="mb-15">Areas of particular interest are:</h4>
-                                    
+
                                 </div>
                             </div>
                             <div class="row">
-                                <ol class="col-xl-6 col-lg-6 col-md-6 col-sm-12 blog-details__list mt-20">
-                                    <li><a href="#">Enterprise risk management (corporate, governments/municipalities)</a></li>
-                                    <li><a href="#">Insurance</a></li>
-                                    <li><a href="#">Alternative Risk financing</a></li>
-                                    <li><a href="#">Operational Risk Management (financial and non-financial companies)</a></li>
-                                    <li><a href="#">Credit Risk Management (financial and non-financial companies)</a></li>
-                                    <li><a href="#">Treasury Risk management(financial and non-financial companies)</a></li>
-                                    <li><a href="#">Corporate Governance</a></li>
-                                    <li><a href="#">External/Internal Audit</a></li>
-                                    <li><a href="#">Healthcare risk management</a></li>
-                                    <li><a href="#">Country Risk Management</a></li>
-                                    <li><a href="#">Economic Risk Management</a></li>
-                                    <li><a href="#">Disaster Management</a></li>
-                                </ol>
-                                <ol class="col-xl-6 col-lg-6 col-md-6 col-sm-12 blog-details__list mt-20">
-                                    <li><a href="#">Environmental Risk Management</a></li>
-                                    <li><a href="#">Crisis management</a></li>
-                                    <li><a href="#">Business Continuity</a></li>
-                                    <li><a href="#">Cyber Risk Management</a></li>
-                                    <li><a href="#">Social Risk Management</a></li>
-                                    <li><a href="#">Risk Governance (Global Risks)</a></li>
-                                    <li><a href="#">International Business Law</a></li>
-                                    <li><a href="#">International Investment Law</a></li>
-                                    <li><a href="#">International Trade</a></li>
-                                    <li><a href="#">Leadership</a></li>
-                                    <li><a href="#">Strategic Management</a></li>
-                                    <li><a href="#">Risk management information systems</a></li>
+                                <ol class="blog-details__list mt-20">
+                                    <li><a href="#">
+                                            Ethical Leadership
+                                        </a></li>
+                                    <li><a href="#">Risk Appetite</a></li>
+                                    <li><a href="#">Risk Tolerance</a></li>
+                                    <li><a href="#">Risk Culture</a></li>
+                                    <li><a href="#">Corporate Governance</a>
+                                    </li>
+                                    <li><a href="#">Enterprise Risk Management</a>
+                                    </li>
+                                    <li><a href="#">Strategic Planning</a></li>
                                 </ol>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-12">
-                    <div class="services-right-area pl-50">
-                        <div class="widget mb-40">
-                            <ul class="widget-list-with-links">
-                                <li class="list-item"><a href="{{route('author.index')}}">Register as author</a></li>
-                                <li class="list-item"><a href="{{route('article.index')}}">Submit an article</a></li>
-                                <li class="list-item"><a href="{{route('subscribe')}}">Subscribe to journal</a></li>
-                                @if (session('subscribe'))
-                                <li class="list-item">
-                                    <a href="{{route('shows', ['id'=>session('subscribe')])}}">Subscribe Profile</a>
-                                </li>
-                                @endif
-                                <li class="list-item"><a href="{{route('artis')}}">View articles</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget mb-40">
-                            <div class="widget-title">
-                                <h5>Contact Us</h5>
-                            </div>
-                            <ul class="address-list">
-                                <li>
-                                    <span>Editorial</span><p> Franchesca J. Charney</p>
-                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
-                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
-                                </li>
-                                <li>
-                                    <span>Publications</span><p>Richard Reicherter</p>
-                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
-                                    <a href="mailto:richard@arimas.org">Email: <span>richard@arimas.org</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget add-img-here mb-40">
-                            <img src="assets/img/service/08.jpg" alt="">
                         </div>
                     </div>
                 </div>

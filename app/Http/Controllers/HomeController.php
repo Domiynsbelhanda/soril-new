@@ -120,4 +120,9 @@ class HomeController extends Controller
             'file'=>$request->pdf
         ]);
     }
+
+    public function framework(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('journal.framework');
+    }
 }

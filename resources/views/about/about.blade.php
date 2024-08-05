@@ -19,14 +19,14 @@
     </section> --}}
     <section>
         @if(session('message'))
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="alert alert-success" role="alert">
-                    {{session('message')}}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-success" role="alert">
+                        {{session('message')}}
+                    </div>
                 </div>
             </div>
-        </div>
-    @endif
+        @endif
     </section>
     <section class="about-area-04 pt-70 pb-70">
         <div class="container">
@@ -61,15 +61,20 @@
                     <div class="about-wrapper-02 about-wrapper-05 pl-50">
                         <div class="section-title section-title-03 mb-55">
                             <h2 class="mb-15">Who We Are</h2>
-                            <span class="mb-30">Society of Risk Leadership (SoRil) is a Non-Profit Organisation 
-                                representing risk leaders from around the African continent and provides them 
-                                with professional support. SoRil also partners with African national and regional 
-                                risk management associations, institutes and academic institutions to advance 
-                                risk leadership in Africa..</span>
-                            <p class="mb-35">SoRil also operates as a coalition of national risk management 
-                                associations to advance in Africa both the risk management practice 
-                                and risk leadership.</p>
-                            
+                            <span class="mb-30">
+                                SoRiL, the Society of Risk Leadership®️, supports business leaders to steer the risk
+                                agenda in their companies by enabling them to be better at the demonstrating ethical
+                                leadership, at determining and applying risk appetite, at influencing risk culture and
+                                at guiding the risk management plan.
+                            </span>
+                            <p class="mb-35">
+                                Founded in 2012, the Society promotes risk leadership through networking, guidance,
+                                certification, and research, and organises the RISKLEADERS FORUM®️, an annual gathering
+                                of business leaders and an opportunity for business leaders to share their experiences
+                                and knowledge about risk leadership. SoRiL embraces diversity, equity and inclusion and
+                                welcomes all business leaders to connect, learn and engage via LinkedIn and X.
+                            </p>
+
                         </div>
                         @php
                             $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
@@ -88,7 +93,8 @@
                                         </div>
                                         <h6 class="slide-title">{{$annual->titre}}</h6>
                                         <p>{{$annual->description}}</p>
-                                        <a class="theme_btn mt-3" href="{{route('conference', $annual->id)}}">View more <i class="fal fa-long-arrow-right"></i></a>
+                                        <a class="theme_btn mt-3" href="{{route('conference', $annual->id)}}">View more
+                                            <i class="fal fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -109,11 +115,11 @@
                                 <!-- <h6 class="left_line pl-55">Features</h6> -->
                                 <h2 style="color: #00aa55">What Guide Us</h2>
                                 <p class="mt-10" style="color: #c4c4c4;">
-                                    With the expiry of the previous Strategic Plan in 2019, 
-                                    SoRil decided to embark on the development of a new Strategic 
-                                    Plan which would transform the Organisation and created added 
-                                    value for its members and other stakeholders. The new Plan is 
-                                    for the period 2020-2025 and it is based on the Purpose Statement 
+                                    With the expiry of the previous Strategic Plan in 2019,
+                                    SoRil decided to embark on the development of a new Strategic
+                                    Plan which would transform the Organisation and created added
+                                    value for its members and other stakeholders. The new Plan is
+                                    for the period 2020-2025 and it is based on the Purpose Statement
                                     introduced by the new President, Mr Mimile Maisha.
                                 </p>
                             </div>
@@ -125,8 +131,8 @@
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Purpose</h5>
                                     <p class="mb-10">
-                                        To help risk leaders in African organisations to be able to make 
-                                        risk-informed decisions for the good of the organisation they run, 
+                                        To help risk leaders in African organisations to be able to make
+                                        risk-informed decisions for the good of the organisation they run,
                                         the people they lead and the communities in which they operate.
                                     </p>
                                 </div>
@@ -137,9 +143,9 @@
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Mission</h5>
                                     <p class="mb-10">
-                                        We advance risk leadership in African business 
-                                        and public organisations through internal and 
-                                        external events, professional development, research, 
+                                        We advance risk leadership in African business
+                                        and public organisations through internal and
+                                        external events, professional development, research,
                                         and advocacy.
                                     </p>
                                 </div>
@@ -164,24 +170,24 @@
                                 <!-- <h6 class="left_line pl-55">Features</h6> -->
                                 <h2>Our Governance</h2>
                                 <p class="mt-10" style="color: #c4c4c4;">
-                                    he Board of Directors is the decision-making body of the Society and its 
-                                    decisions are taken by consensus. It has the ultimate responsibility for 
-                                    directing the activities of the Society and in insuring that its stated 
-                                    purpose is effectively pursued and fulfilled. It consists of 12 risk 
-                                    professionals from different risk management associations and institutes 
+                                    he Board of Directors is the decision-making body of the Society and its
+                                    decisions are taken by consensus. It has the ultimate responsibility for
+                                    directing the activities of the Society and in insuring that its stated
+                                    purpose is effectively pursued and fulfilled. It consists of 12 risk
+                                    professionals from different risk management associations and institutes
                                     in different African countries
 
-                                    The day-to-day operations and activities of the Society are performed by 
-                                    the General Secretariate which is accountable to the Board of Directors 
-                                    and provides regular progress updates and status reports on the Society’s 
+                                    The day-to-day operations and activities of the Society are performed by
+                                    the General Secretariate which is accountable to the Board of Directors
+                                    and provides regular progress updates and status reports on the Society’s
                                     operations and activities.
 
-                                    Additionally, the Board of Directors has appointed an independent Advisory 
-                                    Committee made up of experts from around the world with deep technical or 
-                                    policy experience related to risk management research and practice. 
-                                    The Advisory Board serves as an independent and unbiased sounding board 
-                                    to the executive team and provides expertise and guidance, while ensuring 
-                                    effective planning, monitoring and strengthening of the Society’s offerings 
+                                    Additionally, the Board of Directors has appointed an independent Advisory
+                                    Committee made up of experts from around the world with deep technical or
+                                    policy experience related to risk management research and practice.
+                                    The Advisory Board serves as an independent and unbiased sounding board
+                                    to the executive team and provides expertise and guidance, while ensuring
+                                    effective planning, monitoring and strengthening of the Society’s offerings
                                     and enhancing its public standing.
                                 </p>
                             </div>
@@ -201,39 +207,41 @@
             <div class="feature-wrapper pl-35">
                 <ul class="features-list row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="far fa-building"></i> To provide a risk leadership perspective on African issues;</li>
+                        <li><i class="far fa-building"></i> To provide a risk leadership perspective on African issues;
+                        </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="far fa-code"></i> To advocate for risk leadership before international 
+                        <li><i class="far fa-code"></i> To advocate for risk leadership before international
                             and governmental institutions;
                         </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To represent and defend the interests of 
+                        <li><i class="fal fa-book"></i> To represent and defend the interests of
                             our member associations and their members;
                         </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To create, collect and share knowledge and innovative approaches 
+                        <li><i class="fal fa-book"></i> To create, collect and share knowledge and innovative approaches
                             amongst our member associations and their members;
                         </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To improve the recognition of and raise the role of risk leadership 
+                        <li><i class="fal fa-book"></i> To improve the recognition of and raise the role of risk
+                            leadership
                             in African private and public organisations;
                         </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To demonstrate the value that risk 
+                        <li><i class="fal fa-book"></i> To demonstrate the value that risk
                             leadership bring to organisations;
                         </li>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> Take the lead with stakeholders who 
+                        <li><i class="fal fa-book"></i> Take the lead with stakeholders who
                             have an interest in risk leadership.
                         </li>
                     </div>
-                </ul>    
+                </ul>
             </div>
         </div>
     </section>
@@ -262,13 +270,15 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$sec->type}}</span>
-                                <h5 class="semi-title mb-20"><a href="{{ route('secretariat_member', ['id'=>$sec->id]) }}">{{$sec->prenom . ' ' . $sec->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a
+                                        href="{{ route('secretariat_member', ['id'=>$sec->id]) }}">{{$sec->prenom . ' ' . $sec->nom}}</a>
+                                </h5>
                             </div>
                         </div>
-                    </div> 
-                    @empty
-                        
-                    @endforelse
+                    </div>
+                @empty
+
+                @endforelse
             </div>
             <div class="row mt-30">
                 <div class="col-xl-6 offset-xl-3">
@@ -291,12 +301,14 @@
                             </div>
                             <div class="counsilors__content">
                                 <span class="mb-10">{{$admin->position}}</span>
-                                <h5 class="semi-title mb-20"><a href="{{ route('admin_member', ['id'=>$admin->id]) }}">{{$admin->prenom . ' ' . $admin->nom}}</a></h5>
+                                <h5 class="semi-title mb-20"><a
+                                        href="{{ route('admin_member', ['id'=>$admin->id]) }}">{{$admin->prenom . ' ' . $admin->nom}}</a>
+                                </h5>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 @empty
-                        
+
                 @endforelse
             </div>
             <div class="row mt-30">
@@ -308,24 +320,26 @@
             </div>
             <div class="row">
                 @forelse($consultatifs as $cons)
-                <div class="col-xl-3 col-lg-6 col-md-6">
-                    <div class="counsilors counsilors-02 counsilor-03 white-bg mb-30">
-                        <div class="counsilors__img pos-rel mb-20">
-                            <div class="counsilors__img--box">
-                                <img src="{{asset($cons->image)}}" alt="">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="counsilors counsilors-02 counsilor-03 white-bg mb-30">
+                            <div class="counsilors__img pos-rel mb-20">
+                                <div class="counsilors__img--box">
+                                    <img src="{{asset($cons->image)}}" alt="">
+                                </div>
+                                <div class="signature pos-abl">
+                                    {{-- <img src="assets/img/team/signature2.png" alt=""> --}}
+                                </div>
                             </div>
-                            <div class="signature pos-abl">
-                                {{-- <img src="assets/img/team/signature2.png" alt=""> --}}
+                            <div class="counsilors__content">
+                                <span class="mb-10">{{$cons->type}}</span>
+                                <h5 class="semi-title mb-20"><a
+                                        href="{{ route('consultatif_member', ['id'=>$cons->id]) }}">{{$cons->prenom . ' ' . $cons->nom}}</a>
+                                </h5>
                             </div>
-                        </div>
-                        <div class="counsilors__content">
-                            <span class="mb-10">{{$cons->type}}</span>
-                            <h5 class="semi-title mb-20"><a href="{{ route('consultatif_member', ['id'=>$cons->id]) }}">{{$cons->prenom . ' ' . $cons->nom}}</a></h5>
                         </div>
                     </div>
-                </div> 
                 @empty
-                    
+
                 @endforelse
             </div>
         </div>

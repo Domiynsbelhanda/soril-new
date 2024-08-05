@@ -44,6 +44,7 @@ Route::get('/', function (){
 Route::get('home', [HomeController::class, 'home'])->name('home'); // Use in soril
 
 Route::get('message', [HomeController::class, 'message'])->name('message');
+Route::get('theframework', [HomeController::class, 'framework'])->name('framework');
 
 
 Route::get('president-bio', [HomeController::class, 'bio'])->name('presidentbio'); // Use in soril

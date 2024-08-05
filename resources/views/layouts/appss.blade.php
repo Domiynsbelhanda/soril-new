@@ -65,14 +65,11 @@
 
 
                                     <li>
-                                        <a href="{{route('certification')}}">The Framework</a>
+                                        <a href="{{route('framework')}}">The Framework</a>
                                     </li>
 
                                     <li><a href="{{route('journal.index')}}">The Journal</a></li>
 
-                                    <li>
-                                        <a href="{{route('certification')}}">Training</a>
-                                    </li>
 
                                     <li>
                                         <a href="{{route('evenementss')}}">Events</a>
