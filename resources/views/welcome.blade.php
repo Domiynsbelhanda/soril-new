@@ -136,10 +136,10 @@
     <section class="portfolio-area pt-110" id="corner">
         <div class="container" bis_skin_checked="1">
             <div class="row no-gutters align-items-center" bis_skin_checked="1">
-                <div class="col-xl-2 col-lg-6 col-md-12">
+                <div class="col-xl-1 col-lg-4 col-md-12">
 
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-12" bis_skin_checked="1">
+                <div class="col-xl-2 col-lg-6 col-md-12" bis_skin_checked="1">
                     <div class="portfolio portfolio-02" bis_skin_checked="1">
                         <div class="portfolio-02__img" bis_skin_checked="1">
 {{--                            <img class="img-fluid" style="width: 100%!important;" src="{{asset('assets/img/mimile.png')}}" alt="">--}}
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-1 col-lg-6 col-md-12">
+                <div class="col-xl-1 col-lg-4 col-md-12">
 
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-12" bis_skin_checked="1">

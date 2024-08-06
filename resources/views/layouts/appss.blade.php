@@ -205,7 +205,7 @@
                                         src="{{asset('assets/img/logo/footer-logo2.png')}}" alt=""></a>
                             </div>
                             <ul class="box-list">
-                                <li><i class="fal fa-envelope"></i> infos@arimas.org</li>
+                                <li><i class="fal fa-envelope"></i> info@soril.org</li>
                                 <li><i class="fal fa-phone"></i> 011 277 583</li>
                                 <li><i class="fal fa-phone"></i> 071 573 4653</li>
                                 <li><i class="fal fa-map-marker-alt"></i> 08, Meadowbrook Lane, Epsom Downs, Sandton</li>
