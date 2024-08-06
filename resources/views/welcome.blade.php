@@ -34,7 +34,7 @@
         <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
             <div class=" container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-6" style="margin-top: -150px!important;">
                         <div class="slider__content slider__content_02 text-left">
                             {{-- <span class="sub-title left_line mb-15  pl-55">Society Of Risk Leadership</span> --}}
                             <span class="sub-title left_line mb-15  pl-55">

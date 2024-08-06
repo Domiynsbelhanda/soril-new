@@ -191,6 +191,7 @@
                                 <ul class="fot-list">
                                     <li><a href="{{route('home')}}">Home</a></li>
                                     <li><a href="{{route('framework')}}">The Framework</a></li>
+                                    <li><a href="{{route('evenementss')}}">Events</a></li>
                                     <li><a href="{{route('journal.index')}}">The Journal</a></li>
                                 </ul>
                             </div>
