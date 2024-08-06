@@ -189,11 +189,9 @@
                                  <h6 class="fot-title mb-30">Useful Links</h6>
 
                                 <ul class="fot-list">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Individual Members</a></li>
-                                    <li><a href="#">Corporate Members</a></li>
-                                    <li><a href="#">Certification</a></li>
-                                    <li><a href="#">The Journal</a></li>
+                                    <li><a href="{{route('home')}}">Home</a></li>
+                                    <li><a href="{{route('framework')}}">The Framework</a></li>
+                                    <li><a href="{{route('journal.index')}}">The Journal</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -204,7 +202,7 @@
                         <div class="footer__widget--box" style="background-image: url(assets/img/bg/fot-bg-box1.png);">
                             <div class="logo-area">
                                 <a href="{{route('home')}}" class="footer-logo mb-30"><img
-                                        src="assets/img/logo/footer-logo2.png" alt=""></a>
+                                        src="{{asset('assets/img/logo/footer-logo2.png')}}" alt=""></a>
                             </div>
                             <ul class="box-list">
                                 <li><i class="fal fa-envelope"></i> infos@arimas.org</li>

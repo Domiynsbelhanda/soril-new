@@ -18,12 +18,12 @@
                                         {{$message->titreMessage}}
                                     </a>
                                 </h3>
+                                <h6 class="mb-15">
+                                    {{$message->introduction}}
+                                </h6>
                                 <div class="blog__content--meta mb-20" bis_skin_checked="1">
                                     <span><i class="far fa-calendar-alt"></i> {{\Carbon\Carbon::parse($message->date)->format('d/m/Y')}}</span>
                                 </div>
-                                <p class="mb-15">
-                                    {{$message->introduction}}
-                                </p>
 
                                 <blockquote class="block-quote">
                                     <p>

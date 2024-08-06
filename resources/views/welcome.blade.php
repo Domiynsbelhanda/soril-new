@@ -45,8 +45,10 @@
                             </h1>
                             <ul class="btn-list mb-45">
                                 <li><a class="theme_btn active-btn wow fadeInUp animated" data-wow-delay=".7s"
-                                       href="#corner">Learn More<i
-                                            class="far fa-long-arrow-down"></i></a>
+                                       href="#corner">
+                                        President's Corner
+                                        <i class="far fa-long-arrow-down"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -60,9 +62,10 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
                     <div class="card shadow-sm">
+                        <h3>SoRiL’s Risk Leadership Framework</h3>
                         <img class="card-img-top" src="{{ asset('assets/img/framework.jpg') }}"
-                             style="width: 90%; height: auto; margin: 20px auto;" alt="Logo CARL">
-                        <a href="{{ route('certification') }}" class="btn btn-primary">Learn More</a>
+                             style="width: 90%; height: auto; margin: 20px auto;" alt="Logo Framework">
+                        <a href="{{ route('framework') }}" class="theme_btn">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
@@ -77,14 +80,14 @@
                                 interested of risk leadership in ways that will contribute to the availability of risk
                                 leadership related information, and, overall, to the purpose of SoRiL.
                             </p>
-                            <a href="{{ route('journal.index') }}" class="btn btn-primary">Read More</a>
+                            <a href="{{ route('journal.index') }}" class="theme_btn">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="portfolio-area pt-110 pb-30" id="corner">
+    <section class="portfolio-area pt-110 pb-30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -130,7 +133,7 @@
         </div>
     </section>
 
-    <section class="portfolio-area pt-110">
+    <section class="portfolio-area pt-110" id="corner">
         <div class="container" bis_skin_checked="1">
             <div class="row no-gutters align-items-center" bis_skin_checked="1">
                 <div class="col-xl-2 col-lg-6 col-md-12">
@@ -139,8 +142,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-12" bis_skin_checked="1">
                     <div class="portfolio portfolio-02" bis_skin_checked="1">
                         <div class="portfolio-02__img" bis_skin_checked="1">
-                            <img class="img-fluid" style="width: 100%!important;"
-                                 src="{{asset('assets/img/mimile.png')}}" alt="">
+{{--                            <img class="img-fluid" style="width: 100%!important;" src="{{asset('assets/img/mimile.png')}}" alt="">--}}
                         </div>
                         {{--                    <div class="portfolio-02__toltip white-bg d-none d-md-block" bis_skin_checked="1">--}}
                         {{--                        <div class="quote-right text-right mb-20 pr-35" bis_skin_checked="1">--}}
@@ -162,9 +164,9 @@
                             <div class="section-title mb-15" bis_skin_checked="1">
                                 <h6 class="left_line pl-55">The President's Corner</h6>
                                 <h3>
-                                    <a href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}">
-                                        Mimile MAISHA MUKUNA
-                                    </a>
+{{--                                    <a href="{{route('about.profile', ['id'=>1, 'section'=>'management'])}}">--}}
+{{--                                        Mimile MAISHA MUKUNA--}}
+{{--                                    </a>--}}
                                 </h3>
                             </div>
 
@@ -182,10 +184,14 @@
                                     <p class="mb-35">
                                         {{$item->introduction}}
                                     </p>
+                                    <br>
                                     <a class="theme_btn" href="{{route('message', ['id'=>$item->id])}}">
                                         Read full message
                                         <i class="far fa-long-arrow-right"></i>
                                     </a>
+                                    <br>
+                                    <br>
+                                    <br>
                                 </div>
 
                             @empty
