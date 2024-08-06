@@ -62,10 +62,13 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
                     <div class="card shadow-sm">
-                        <h3>SoRiL’s Risk Leadership Framework</h3>
-                        <img class="card-img-top" src="{{ asset('assets/img/framework.jpg') }}"
-                             style="width: 90%; height: auto; margin: 20px auto;" alt="Logo Framework">
-                        <a href="{{ route('framework') }}" class="theme_btn">Learn More</a>
+                        <div class="card-body">
+                            <h3>SoRiL’s Risk Leadership Framework</h3>
+                            <img class="card-img-top" src="{{ asset('assets/img/framework.jpg') }}"
+                                 style="width: 90%; height: auto; margin: 20px auto;" alt="Logo Framework">
+
+                            <a href="{{ route('framework') }}" class="theme_btn" style="background-color: #0a2d6c!important; border-color: transparent!important;">Learn More</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
