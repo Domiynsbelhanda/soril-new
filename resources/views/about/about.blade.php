@@ -69,7 +69,7 @@
                             </span>
                             <p class="mb-35">
                                 Founded in 2012, the Society promotes risk leadership through networking, guidance,
-                                certification, and research, and organises the RISKLEADERS FORUM®️, an annual gathering
+                                seminars, and research. It organises the RISKLEADERS FORUM®️, an annual gathering
                                 of business leaders and an opportunity for business leaders to share their experiences
                                 and knowledge about risk leadership. SoRiL embraces diversity, equity and inclusion and
                                 welcomes all business leaders to connect, learn and engage via LinkedIn and X.
@@ -115,11 +115,11 @@
                                 <!-- <h6 class="left_line pl-55">Features</h6> -->
                                 <h2 style="color: #00aa55">What Guide Us</h2>
                                 <p class="mt-10" style="color: #c4c4c4;">
-                                    With the expiry of the previous Strategic Plan in 2019,
+                                    With the expiry of the previous Strategic Plan in 2021,
                                     SoRil decided to embark on the development of a new Strategic
                                     Plan which would transform the Organisation and created added
                                     value for its members and other stakeholders. The new Plan is
-                                    for the period 2020-2025 and it is based on the Purpose Statement
+                                    for the period 2021-2026 and it is based on the Purpose Statement
                                     introduced by the new President, Mr Mimile Maisha.
                                 </p>
                             </div>
@@ -131,7 +131,7 @@
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Purpose</h5>
                                     <p class="mb-10">
-                                        To help risk leaders in African organisations to be able to make
+                                        To enable business leaders to make
                                         risk-informed decisions for the good of the organisation they run,
                                         the people they lead and the communities in which they operate.
                                     </p>
@@ -143,8 +143,8 @@
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Mission</h5>
                                     <p class="mb-10">
-                                        We advance risk leadership in African business
-                                        and public organisations through internal and
+                                        We advance risk leadership in business
+                                        organisations through internal and
                                         external events, professional development, research,
                                         and advocacy.
                                     </p>
@@ -156,7 +156,7 @@
                                 <div class="features__content">
                                     <h5 class="semi-title mb-25">Vision</h5>
                                     <p class="mb-10">
-                                        A trusted and recognised partner for sustainable development in Africa.
+                                        A trusted and recognised international partner for the advancement of risk leadership.
                                     </p>
                                 </div>
                             </div>
@@ -170,23 +170,21 @@
                                 <!-- <h6 class="left_line pl-55">Features</h6> -->
                                 <h2>Our Governance</h2>
                                 <p class="mt-10" style="color: #c4c4c4;">
-                                    he Board of Directors is the decision-making body of the Society and its
+                                    The Board of Directors is the decision-making body of the Society and its
                                     decisions are taken by consensus. It has the ultimate responsibility for
                                     directing the activities of the Society and in insuring that its stated
-                                    purpose is effectively pursued and fulfilled. It consists of 12 risk
-                                    professionals from different risk management associations and institutes
-                                    in different African countries
+                                    purpose is effectively pursued and fulfilled.
 
                                     The day-to-day operations and activities of the Society are performed by
-                                    the General Secretariate which is accountable to the Board of Directors
+                                    the General Secretariat which is accountable to the Board of Directors
                                     and provides regular progress updates and status reports on the Society’s
                                     operations and activities.
 
                                     Additionally, the Board of Directors has appointed an independent Advisory
                                     Committee made up of experts from around the world with deep technical or
-                                    policy experience related to risk management research and practice.
+                                    policy experience related to risk leadership research and practice.
                                     The Advisory Board serves as an independent and unbiased sounding board
-                                    to the executive team and provides expertise and guidance, while ensuring
+                                    to the General Secretariat and provides expertise and guidance, while ensuring
                                     effective planning, monitoring and strengthening of the Society’s offerings
                                     and enhancing its public standing.
                                 </p>
@@ -198,61 +196,14 @@
         </div>
     </section>
     <!--featur-area- end-->
-    <!-- strategic-objective start -->
-    <section class="stratejic-objective heding-bg pos-rel pt-100 pb-70">
-        <div class="container">
-            <div class="section-title section-title-02 text-left mb-50">
-                <h2 class="mb-20">Strategic Objectives</h2>
-            </div>
-            <div class="feature-wrapper pl-35">
-                <ul class="features-list row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="far fa-building"></i> To provide a risk leadership perspective on African issues;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="far fa-code"></i> To advocate for risk leadership before international
-                            and governmental institutions;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To represent and defend the interests of
-                            our member associations and their members;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To create, collect and share knowledge and innovative approaches
-                            amongst our member associations and their members;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To improve the recognition of and raise the role of risk
-                            leadership
-                            in African private and public organisations;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> To demonstrate the value that risk
-                            leadership bring to organisations;
-                        </li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <li><i class="fal fa-book"></i> Take the lead with stakeholders who
-                            have an interest in risk leadership.
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- strategic-objective end -->
+
     <!--counsilor-area start-->
     <section class="counsilor-area-02 pt-40 pb-70">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3">
                     <div class="section-title theme-border text-center mb-75">
-                        <h2>Generale Secretariate</h2>
+                        <h2>GeneraleSecretariat</h2>
                     </div>
                 </div>
             </div>
@@ -277,7 +228,11 @@
                         </div>
                     </div>
                 @empty
-
+                    <div class="container">
+                        <div class="row">
+                            <h3>To be Confirmed</h3>
+                        </div>
+                    </div>
                 @endforelse
             </div>
             <div class="row mt-30">
@@ -308,7 +263,11 @@
                         </div>
                     </div>
                 @empty
-
+                    <div class="container">
+                        <div class="row">
+                            <h3>To be Confirmed</h3>
+                        </div>
+                    </div>
                 @endforelse
             </div>
             <div class="row mt-30">
@@ -339,7 +298,11 @@
                         </div>
                     </div>
                 @empty
-
+                    <div class="container">
+                        <div class="row">
+                            <h3>To be Confirmed</h3>
+                        </div>
+                    </div>
                 @endforelse
             </div>
         </div>
