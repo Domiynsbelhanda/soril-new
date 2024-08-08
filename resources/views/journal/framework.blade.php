@@ -8,14 +8,16 @@
 
     <section class="awards-area pos-rel pt-100 pb-40">
         <div class="container" bis_skin_checked="1">
+            <div class="section-title text-center mb-5">
+                <h2>
+                    SoRiL’s Risk Leadership Framework
+                </h2>
+            </div>
             <div class="row align-items-center" bis_skin_checked="1">
                 <div class="col-xl-5 col-lg-6" bis_skin_checked="1">
                     <div class="awards-wrapper" bis_skin_checked="1">
                         <div class="section-title text-left mb-75" bis_skin_checked="1">
                             {{--                            <h6 class="left_line pl-55">Awards</h6>--}}
-                            <h2>
-                                SoRiL’s Risk Leadership Framework
-                            </h2>
                             <p>
                                 Risk leadership is business leaders' (board and senior management members)
                                 responsibility to steer their company's risk agenda.
