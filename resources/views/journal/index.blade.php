@@ -142,6 +142,42 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col-xl-3 col-lg-3 col-md-12">
+                    <div class="services-right-area pl-50">
+                        <div class="widget mb-40">
+                            <ul class="widget-list-with-links">
+                                <li class="list-item"><a href="{{route('author.index')}}">Register as author</a></li>
+                                <li class="list-item"><a href="{{route('article.index')}}">Submit an article</a></li>
+                                <li class="list-item"><a href="{{route('subscribe')}}">Subscribe to journal</a></li>
+                                @if (session('subscribe'))
+                                    <li class="list-item">
+                                        <a href="{{route('shows', ['id'=>session('subscribe')])}}">Subscribe Profile</a>
+                                    </li>
+                                @endif
+                                <li class="list-item"><a href="{{route('artis')}}">View articles</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget mb-40">
+                            <div class="widget-title">
+                                <h5>Contact Us</h5>
+                            </div>
+                            <ul class="address-list">
+                                <li>
+                                    <span>Editorial</span><p> Franchesca J. Charney</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:fcharney@soril.org">Email: <span>fcharney@soril.org</span></a>
+                                </li>
+                                <li>
+                                    <span>Publications</span><p>Richard Reicherter</p>
+                                    <a href="tel:+01131254334">Phone: <span>011 312 54334</span></a>
+                                    <a href="mailto:richard@arimas.org">Email: <span>richard@soril.org</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

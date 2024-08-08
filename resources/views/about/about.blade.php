@@ -36,22 +36,22 @@
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="img-view img-view-01">
-                                    <img src="assets/img/about/about1.png" alt="">
+                                    <img src="{{asset('assets/img/about/about1.png')}}" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="img-view mb-30">
-                                    <img src="assets/img/about/about2.png" alt="">
+                                    <img src="{{asset('assets/img/about/about2.png')}}" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="img-view img-view-01 mb-30">
-                                    <img src="assets/img/about/about3.png" alt="">
+                                    <img src="{{asset('assets/img/about/about3.png')}}" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="img-view mb-30">
-                                    <img src="assets/img/about/about4.png" alt="">
+                                    <img src="{{asset('assets/img/about/about4.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
