@@ -7,9 +7,6 @@
 @section('content')
 
     <section class="awards-area pos-rel pt-100 pb-40">
-        <div class="awards__img__two d-none d-xl-block" bis_skin_checked="1">
-            <img src="{{asset('assets/img/about/award2.jpg')}}" alt="">
-        </div>
         <div class="container" bis_skin_checked="1">
             <div class="row align-items-center" bis_skin_checked="1">
                 <div class="col-xl-5 col-lg-6" bis_skin_checked="1">
