@@ -32,12 +32,12 @@
 
     <!-- Add your site or application content here -->
     <!-- preloader -->
-    <div id="preloader">
-        <div class="preloader">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+{{--    <div id="preloader">--}}
+{{--        <div class="preloader">--}}
+{{--            <span></span>--}}
+{{--            <span></span>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- preloader end  -->
     <!-- header-area start -->
     <header class="head-one">
