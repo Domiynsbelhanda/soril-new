@@ -12,7 +12,7 @@
         </div>
         <div class="container" bis_skin_checked="1">
             <div class="row align-items-center" bis_skin_checked="1">
-                <div class="col-xl-7 col-lg-8" bis_skin_checked="1">
+                <div class="col-xl-5 col-lg-6" bis_skin_checked="1">
                     <div class="awards-wrapper" bis_skin_checked="1">
                         <div class="section-title text-left mb-75" bis_skin_checked="1">
                             {{--                            <h6 class="left_line pl-55">Awards</h6>--}}
@@ -177,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-4" bis_skin_checked="1">
+                <div class="col-xl-7 col-lg-6" bis_skin_checked="1">
                     <div class="award" bis_skin_checked="1">
                         <div class="awards__img pl-60" bis_skin_checked="1">
                             <img src="{{asset('assets/img/framework.jpg')}}" alt="">
