@@ -9,7 +9,7 @@
         $annual = \App\Models\Evenement::where('typeEvent', 'annual')->first();
     @endphp
     <section class="page-title-area"
-             style="background: linear-gradient(#03072e7a, #040c5253), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
+             style="background: linear-gradient(rgb(250,250,250), rgb(255,255,255)), url({{ asset('assets/img/bg/page-title-bg1.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 offset-xl-4">

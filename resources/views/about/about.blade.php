@@ -202,8 +202,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3">
-                    <div class="section-title theme-border text-center mb-75">
-                        <h2>GeneraleSecretariat</h2>
+                    <div class="section-title theme-border green-title text-center mb-75">
+                        <h2>The General Secretariat</h2>
                     </div>
                 </div>
             </div>
@@ -237,8 +237,8 @@
             </div>
             <div class="row mt-30">
                 <div class="col-xl-6 offset-xl-3">
-                    <div class="section-title theme-border text-center mb-75">
-                        <h2>Board of Directors</h2>
+                    <div class="section-title green-title theme-border text-center mb-75">
+                        <h2>The Board of Directors</h2>
                     </div>
                 </div>
             </div>
@@ -272,8 +272,8 @@
             </div>
             <div class="row mt-30">
                 <div class="col-xl-6 offset-xl-3">
-                    <div class="section-title theme-border text-center mb-75">
-                        <h2>Advisory Board</h2>
+                    <div class="section-title green-title theme-border text-center mb-75">
+                        <h2>The Advisory Board</h2>
                     </div>
                 </div>
             </div>
