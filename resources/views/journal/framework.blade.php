@@ -26,7 +26,8 @@
 
                         <style>
                             ul, li{
-                                margin-bottom: 15px!important;
+                                margin-bottom: 5px!important;
+                                color: #0a0f16;
                             }
                         </style>
 
@@ -100,7 +101,7 @@
                                                         &#8226;
                                                         It is objective-focused: It must be aligned with the specific
                                                         objectives and strategic intent of the organisation.
-                                                        <span style="font-style: italic">
+                                                        <span style="font-style: italic; font-size: 14px">
                                                         (Some companies prefer to articulate appetite according to a common
                                                     risk taxonomy that is based on common characteristics of risk. This
                                                     approach emphasises acceptable levels of risk given the unique
